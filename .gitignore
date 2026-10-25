@@ -11,3 +11,7 @@ private-audit/
 *.key
 .env
 __pycache__/
+
+# Raw packet captures remain in the private audit workspace.
+*.pcap
+*.pcapng
