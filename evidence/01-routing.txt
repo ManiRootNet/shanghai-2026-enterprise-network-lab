@@ -4,22 +4,22 @@ No configuration scripts or credentials are included.
 ==============================================================================
 Device: BR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-1   172.16.1.1              Tu0                      13 00:04:09   98  5000  0  208
-0   172.16.1.2              Tu0                      11 00:22:28   77  5000  0  138
+1   172.16.1.1              Tu0                      10 01:43:59   29  5000  0  592
+0   172.16.1.2              Tu0                      14 02:02:17   17  5000  0  525
 BR-1#
 BR-1#
 
 ==============================================================================
 Device: BR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
@@ -27,24 +27,37 @@ BR-1#
 BR-1#
 
 ==============================================================================
+Device: BR-1
+Phase: final state
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
+Command: show ip ospf neighbor
+------------------------------------------------------------------------------
+show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+198.51.100.1      0   FULL/  -        00:00:38    192.0.2.1       Ethernet0/0
+BR-1#
+BR-1#
+
+==============================================================================
 Device: BR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-1   172.16.1.1              Tu0                      13 00:04:09   39  5000  0  208
-0   172.16.1.2              Tu0                      11 00:22:28   98  5000  0  138
+1   172.16.1.1              Tu0                      10 01:43:59   49  5000  0  592
+0   172.16.1.2              Tu0                      14 02:02:17   34  5000  0  525
 BR-2#
 BR-2#
 
 ==============================================================================
 Device: BR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
@@ -52,118 +65,133 @@ BR-2#
 BR-2#
 
 ==============================================================================
+Device: BR-2
+Phase: final state
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
+Command: show ip ospf neighbor
+------------------------------------------------------------------------------
+show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+198.51.100.1      0   FULL/  -        00:00:33    192.0.2.5       Ethernet0/0
+BR-2#
+BR-2#
+
+==============================================================================
 Device: CR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.382963+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   172.16.0.126            Et0/1                    14 00:01:42 1600  5000  0  172
-3   172.16.0.117            Et0/3                    11 00:36:37    3   100  0  148
-4   172.16.0.105            Et0/0                    12 00:43:15    1   100  0  221
-1   172.16.0.122            Et0/2                    11 00:44:34    3   100  0  242
-0   172.16.0.130            Et1/0                    12 00:44:34    5   100  0  156
+2   172.16.0.126            Et0/1                    12 00:01:12 1598  5000  0  46
+0   172.16.0.130            Et1/0                    12 00:18:37   24   144  0  60
+3   172.16.0.117            Et0/3                    10 02:16:27    1   100  0  523
+4   172.16.0.105            Et0/0                    10 02:23:06    4   100  0  595
+1   172.16.0.122            Et0/2                    13 02:24:24    3   100  0  709
 CR-1#
 CR-1#
 
 ==============================================================================
 Device: CR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.382963+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   Link-local address:     Et0/1                    12 00:01:43   10   100  0  123
+2   Link-local address:     Et0/1                    10 00:01:14    6   100  0  43
     FE80::A8BB:CCFF:FE00:8000
-4   Link-local address:     Et0/0                    12 00:43:12   49   294  0  50
-    FE80::A8BB:CCFF:FE00:3000
-3   Link-local address:     Et0/3                    11 00:43:16   61   366  0  50
-    FE80::A8BB:CCFF:FE00:4010
-1   Link-local address:     Et0/2                    11 00:44:32    7   100  0  109
-    FE80::A8BB:CCFF:FE00:7020
-0   Link-local address:     Et1/0                    10 00:44:33    4   100  0  107
+0   Link-local address:     Et1/0                    13 00:18:40   12   100  0  76
     FE80::A8BB:CCFF:FE00:9030
+4   Link-local address:     Et0/0                    12 02:23:03    6   100  0  355
+    FE80::A8BB:CCFF:FE00:3000
+3   Link-local address:     Et0/3                    11 02:23:07    8   100  0  357
+    FE80::A8BB:CCFF:FE00:4010
+1   Link-local address:     Et0/2                    13 02:24:22    8   100  0  617
+    FE80::A8BB:CCFF:FE00:7020
 CR-1#
 CR-1#
 
 ==============================================================================
 Device: CR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:56.920377+00:00
+Captured UTC: 2026-10-25T14:35:46.137154+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   172.16.0.138            Et1/0                    12 00:01:44    6   100  0  173
-3   172.16.0.113            Et0/0                    11 00:36:40    2   100  0  149
-4   172.16.0.109            Et0/3                    14 00:43:17    1   100  0  219
-1   172.16.0.134            Et0/1                    14 00:44:34    4   100  0  157
-0   172.16.0.121            Et0/2                    14 00:44:35    2   100  0  263
+2   172.16.0.134            Et0/1                    12 00:01:08    1  5000  1  54
+1   172.16.0.138            Et1/0                    13 00:01:09    4   100  0  47
+3   172.16.0.113            Et0/0                    12 02:16:29    1   100  0  524
+4   172.16.0.109            Et0/3                    13 02:23:06    1   100  0  594
+0   172.16.0.121            Et0/2                    14 02:24:25    5   100  0  647
 CR-2#
 CR-2#
 
 ==============================================================================
 Device: CR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:56.920377+00:00
+Captured UTC: 2026-10-25T14:35:46.137154+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-1   Link-local address:     Et1/0                    13 00:01:43 1599  5000  0  122
-    FE80::A8BB:CCFF:FE00:8030
-4   Link-local address:     Et0/3                    11 00:43:16   57   342  0  48
-    FE80::A8BB:CCFF:FE00:3010
-3   Link-local address:     Et0/0                    10 00:43:18   74   444  0  51
-    FE80::A8BB:CCFF:FE00:4000
-2   Link-local address:     Et0/2                    13 00:44:33    5   100  0  127
-    FE80::A8BB:CCFF:FE00:6020
-0   Link-local address:     Et0/1                    13 00:44:35    3   100  0  108
+0   Link-local address:     Et0/1                    13 00:00:01    1  2000  1  0
     FE80::A8BB:CCFF:FE00:9000
+1   Link-local address:     Et1/0                    11 00:01:13    8   100  0  44
+    FE80::A8BB:CCFF:FE00:8030
+4   Link-local address:     Et0/3                    12 02:23:05    6   100  0  357
+    FE80::A8BB:CCFF:FE00:3010
+3   Link-local address:     Et0/0                    12 02:23:07    4   100  0  358
+    FE80::A8BB:CCFF:FE00:4000
+2   Link-local address:     Et0/2                    11 02:24:23    7   100  0  563
+    FE80::A8BB:CCFF:FE00:6020
 CR-2#
+CR-2#
+Oct 25 14:35:48.150: %DUAL-5-NBRCHANGE: EIGRP-IPv6 2026: Neighbor FE80::A8BB:CCFF:FE00:9000 (Ethernet0/1) is up: new adjacency
 CR-2#
 
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   172.16.0.142            Vl999                    11 00:01:40    2   100  0  158
-1   172.16.0.125            Et0/0                    12 00:01:45    1   100  0  267
-0   172.16.0.137            Et0/3                    10 00:01:46    3   100  0  243
+2   172.16.0.142            Vl999                    10 00:01:10    8   100  0  59
+1   172.16.0.137            Et0/3                    11 00:01:11 1596  5000  0  706
+0   172.16.0.125            Et0/0                    11 00:01:14    7   100  0  650
 DS1#
 DS1#
 
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   Link-local address:     Vl999                    12 00:01:42 1277  5000  0  109
-    FE80::A8BB:CCFF:FE80:9000
-1   Link-local address:     Et0/3                    13 00:01:45   10   100  0  114
+4   Link-local address:     Et0/3                    10 00:01:10  276  1656  0  616
     FE80::A8BB:CCFF:FE00:7001
-0   Link-local address:     Et0/0                    11 00:01:47   14   100  0  126
+3   Link-local address:     Vl999                    12 00:01:10 1598  5000  0  75
+    FE80::A8BB:CCFF:FE80:9000
+2   Link-local address:     Et0/0                    12 00:01:11   84   504  0  567
     FE80::A8BB:CCFF:FE00:6010
 DS1#
 DS1#
@@ -171,99 +199,173 @@ DS1#
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   172.16.0.141            Vl999                    10 00:01:47    7   100  0  174
-1   172.16.0.133            Et0/0                    10 00:44:43    4   100  0  239
-0   172.16.0.129            Et0/3                    14 00:44:45    4   100  0  266
+2   172.16.0.141            Vl999                    11 00:01:18   10   100  0  45
+1   172.16.0.133            Et0/0                    14 00:01:19    1  5000  1  0
+0   172.16.0.129            Et0/3                    13 00:18:52    5   100  0  646
 DS2#
 DS2#
 
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   Link-local address:     Vl999                    12 00:01:49    1   100  0  125
-    FE80::A8BB:CCFF:FE80:8000
-1   Link-local address:     Et0/3                    10 00:44:43    3   100  0  129
-    FE80::A8BB:CCFF:FE00:6001
-0   Link-local address:     Et0/0                    11 00:44:44    6   100  0  112
+1   Link-local address:     Et0/0                    12 00:00:11    1  5000  1  0
     FE80::A8BB:CCFF:FE00:7010
+2   Link-local address:     Vl999                    11 00:01:19    5   100  0  45
+    FE80::A8BB:CCFF:FE80:8000
+0   Link-local address:     Et0/3                    13 00:18:55    5   100  0  564
+    FE80::A8BB:CCFF:FE00:6001
 DS2#
 DS2#
 
 ==============================================================================
 Device: DS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
 Command: show ip ospf neighbor
 ------------------------------------------------------------------------------
 show ip ospf neighbor
 
 Neighbor ID     Pri   State           Dead Time   Address         Interface
-172.31.0.40       0   FULL/  -        00:00:32    172.31.0.110    Vlan999
-172.31.0.10       0   FULL/  -        00:00:36    172.31.0.101    Ethernet0/0
+172.31.0.40       0   FULL/  -        00:00:37    172.31.0.110    Vlan999
+172.31.0.10       0   FULL/  -        00:00:35    172.31.0.101    Ethernet0/0
+DS3#
+DS3#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
+Command: show ip ospf database summary 203.0.113.0
+------------------------------------------------------------------------------
+show ip ospf database summary 203.0.113.0
+
+            OSPF Router with ID (172.31.0.30) (Process ID 100)
+
+		Summary Net Link States (Area 0)
+
+  LS age: 1875
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 203.0.113.0 (summary Network Number)
+  Advertising Router: 172.31.0.30
+  LS Seq Number: 80000002
+  Checksum: 0x987B
+  Length: 28
+  Network Mask: /24
+	MTID: 0 	Metric: 1 
+
+  LS age: 1885
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 203.0.113.0 (summary Network Number)
+  Advertising Router: 172.31.0.40
+  LS Seq Number: 80000002
+  Checksum: 0x5CAD
+  Length: 28
+  Network Mask: /24
+	MTID: 0 	Metric: 1 
+
 DS3#
 DS3#
 
 ==============================================================================
 Device: DS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
 Command: show ip ospf neighbor
 ------------------------------------------------------------------------------
 show ip ospf neighbor
 
 Neighbor ID     Pri   State           Dead Time   Address         Interface
-172.31.0.30       0   FULL/  -        00:00:32    172.31.0.109    Vlan999
-172.31.0.10       0   FULL/  -        00:00:35    172.31.0.105    Ethernet0/0
+172.31.0.30       0   FULL/  -        00:00:30    172.31.0.109    Vlan999
+172.31.0.10       0   FULL/  -        00:00:31    172.31.0.105    Ethernet0/0
+DS4#
+DS4#
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
+Command: show ip ospf database summary 203.0.113.0
+------------------------------------------------------------------------------
+show ip ospf database summary 203.0.113.0
+
+            OSPF Router with ID (172.31.0.40) (Process ID 100)
+
+		Summary Net Link States (Area 0)
+
+  LS age: 1876
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 203.0.113.0 (summary Network Number)
+  Advertising Router: 172.31.0.30
+  LS Seq Number: 80000002
+  Checksum: 0x987B
+  Length: 28
+  Network Mask: /24
+	MTID: 0 	Metric: 1 
+
+  LS age: 1884
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 203.0.113.0 (summary Network Number)
+  Advertising Router: 172.31.0.40
+  LS Seq Number: 80000002
+  Checksum: 0x5CAD
+  Length: 28
+  Network Mask: /24
+	MTID: 0 	Metric: 1 
+
 DS4#
 DS4#
 
 ==============================================================================
 Device: IR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-3   172.16.1.101            Tu0                      11 00:05:09    9  5000  0  27
-1   172.16.1.102            Tu0                      10 00:05:09   25  5000  0  25
-4   172.16.0.102            Et0/2                    13 00:36:25    1   100  0  147
-2   172.16.0.110            Et0/1                    12 00:43:05    3   100  0  241
-0   172.16.0.106            Et0/0                    13 00:43:05    4   100  0  264
+3   172.16.1.101            Tu0                      11 01:44:58   28  5000  0  62
+1   172.16.1.102            Tu0                      14 01:44:59   29  5000  0  60
+4   172.16.0.102            Et0/2                    10 02:16:15    5   100  0  526
+2   172.16.0.110            Et0/1                    14 02:22:55    4   100  0  707
+0   172.16.0.106            Et0/0                    11 02:22:55    2   100  0  649
 IR-1#
 IR-1#
 
 ==============================================================================
 Device: IR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   Link-local address:     Et0/0                    12 00:43:03    4   100  0  125
+2   Link-local address:     Et0/0                    12 02:22:52    3   100  0  565
     FE80::A8BB:CCFF:FE00:6000
-1   Link-local address:     Et0/1                    12 00:43:04    5   100  0  110
+1   Link-local address:     Et0/1                    10 02:22:54    4   100  0  619
     FE80::A8BB:CCFF:FE00:7030
-0   Link-local address:     Et0/2                    13 00:43:05    6   100  0  49
+0   Link-local address:     Et0/2                    13 02:22:54    6   100  0  356
     FE80::A8BB:CCFF:FE00:4020
 IR-1#
 IR-1#
@@ -271,31 +373,31 @@ IR-1#
 ==============================================================================
 Device: IR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ip bgp summary
 ------------------------------------------------------------------------------
 show ip bgp summary
 BGP router identifier 172.16.0.1, local AS number 65512.1
-BGP table version is 173, main routing table version 173
+BGP table version is 295, main routing table version 295
 34 network entries using 4760 bytes of memory
 44 path entries using 3520 bytes of memory
-16/13 BGP path/bestpath attribute entries using 2304 bytes of memory
+18/13 BGP path/bestpath attribute entries using 2592 bytes of memory
 3 BGP AS-PATH entries using 72 bytes of memory
 0 BGP route-map cache entries using 0 bytes of memory
 0 BGP filter-list cache entries using 0 bytes of memory
-BGP using 10656 total bytes of memory
-BGP activity 38/4 prefixes, 105/61 paths, scan interval 60 secs
+BGP using 10944 total bytes of memory
+BGP activity 45/11 prefixes, 145/101 paths, scan interval 60 secs
 
 Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
-172.16.0.2      4      65512.1     321     333      173    0    0 00:43:02       10
-192.0.2.101     4      65000.1     201     193      173    0    0 00:29:39        7
+172.16.0.2      4      65512.1     976     990      295    0    0 02:22:51       10
+192.0.2.101     4      65000.1     833     823      295    0    0 02:09:29        7
 IR-1#
 IR-1#
 
 ==============================================================================
 Device: IR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show bfd neighbors details
 ------------------------------------------------------------------------------
 show bfd neighbors details
@@ -305,11 +407,11 @@ IR-1#
 ==============================================================================
 Device: IR-1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.709256+00:00
 Command: show ip bgp neighbors 192.0.2.101 advertised-routes
 ------------------------------------------------------------------------------
 show ip bgp neighbors 192.0.2.101 advertised-routes
-BGP table version is 173, local router ID is 172.16.0.1
+BGP table version is 295, local router ID is 172.16.0.1
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
               r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
               x best-external, a additional-path, c RIB-compressed, 
@@ -328,36 +430,36 @@ IR-1#
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ip eigrp neighbors
 ------------------------------------------------------------------------------
 show ip eigrp neighbors
 EIGRP-IPv4 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-4   172.16.1.102            Tu0                      10 00:22:28   83  5000  0  26
-3   172.16.1.101            Tu0                      11 00:22:28   16  5000  0  28
-2   172.16.0.101            Et0/2                    13 00:36:25    1   100  0  220
-1   172.16.0.118            Et0/1                    11 00:36:27    3   100  0  265
-0   172.16.0.114            Et0/0                    11 00:36:28    4   100  0  240
+4   172.16.1.102            Tu0                      14 02:02:17   43  5000  0  61
+3   172.16.1.101            Tu0                      11 02:02:17   42  5000  0  63
+2   172.16.0.101            Et0/2                    10 02:16:15    3   100  0  593
+1   172.16.0.118            Et0/1                    11 02:16:16    2   100  0  648
+0   172.16.0.114            Et0/0                    10 02:16:18    2   100  0  708
 IR-2#
 IR-2#
 
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ipv6 eigrp neighbors
 ------------------------------------------------------------------------------
 show ipv6 eigrp neighbors
 EIGRP-IPv6 VR(WSC2026) Address-Family Neighbors for AS(2026)
 H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
                                                    (sec)         (ms)       Cnt Num
-2   Link-local address:     Et0/2                    14 00:43:05  112   672  0  49
+2   Link-local address:     Et0/2                    13 02:22:54    2   100  0  356
     FE80::A8BB:CCFF:FE00:3020
-1   Link-local address:     Et0/1                    11 00:43:07    5   100  0  128
+1   Link-local address:     Et0/1                    12 02:22:56    1   100  0  566
     FE80::A8BB:CCFF:FE00:6030
-0   Link-local address:     Et0/0                    13 00:43:07    3   100  0  111
+0   Link-local address:     Et0/0                    12 02:22:56    4   100  0  618
     FE80::A8BB:CCFF:FE00:7000
 IR-2#
 IR-2#
@@ -365,32 +467,32 @@ IR-2#
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ip bgp summary
 ------------------------------------------------------------------------------
 show ip bgp summary
 BGP router identifier 172.16.0.2, local AS number 65512.1
-BGP table version is 172, main routing table version 172
+BGP table version is 314, main routing table version 314
 34 network entries using 4760 bytes of memory
 44 path entries using 3520 bytes of memory
-16/13 BGP path/bestpath attribute entries using 2304 bytes of memory
+18/13 BGP path/bestpath attribute entries using 2592 bytes of memory
 3 BGP AS-PATH entries using 72 bytes of memory
 0 BGP route-map cache entries using 0 bytes of memory
 0 BGP filter-list cache entries using 0 bytes of memory
-BGP using 10656 total bytes of memory
-BGP activity 34/0 prefixes, 141/97 paths, scan interval 60 secs
+BGP using 10944 total bytes of memory
+BGP activity 41/7 prefixes, 202/158 paths, scan interval 60 secs
 
 Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
-172.16.0.1      4      65512.1     333     321      172    0    0 00:43:02        6
-192.0.2.201     4      65000.1     287     276      172    0    0 00:42:58        7
-203.0.113.1     4      64509.1      40      37      172    0    0 00:29:04        4
+172.16.0.1      4      65512.1     990     976      314    0    0 02:22:51        6
+192.0.2.201     4      65000.1     917     903      314    0    0 02:22:47        7
+203.0.113.1     4      64509.1      90      86      314    0    0 01:13:53        4
 IR-2#
 IR-2#
 
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show bfd neighbors details
 ------------------------------------------------------------------------------
 show bfd neighbors details
@@ -403,21 +505,21 @@ Session Host: Software
 OurAddr: 203.0.113.2    
 Handle: 1
 Local Diag: 0, Demand mode: 0, Poll bit: 0
-MinTxInt: 300000, MinRxInt: 300000, Multiplier: 3
-Received MinRxInt: 300000, Received Multiplier: 3
-Holddown (hits): 640(0), Hello (hits): 300(6528)
-Rx Count: 6531, Rx Interval (ms) min/max/avg: 1/649/267 last: 260 ms ago
-Tx Count: 6531, Tx Interval (ms) min/max/avg: 1/480/266 last: 204 ms ago
+MinTxInt: 100000, MinRxInt: 100000, Multiplier: 3
+Received MinRxInt: 100000, Received Multiplier: 3
+Holddown (hits): 277(0), Hello (hits): 100(48228)
+Rx Count: 48244, Rx Interval (ms) min/max/avg: 1/254/92 last: 23 ms ago
+Tx Count: 48230, Tx Interval (ms) min/max/avg: 1/192/92 last: 23 ms ago
 Elapsed time watermarks: 0 0 (last: 0)
 Registered protocols: BGP 
-Uptime: 00:29:03
+Uptime: 01:13:53
 Last packet: Version: 1                  - Diagnostic: 0
              State bit: Up               - Demand bit: 0
              Poll bit: 0                 - Final bit: 0
              C bit: 0                                   
              Multiplier: 3               - Length: 24
              My Discr.: 1                - Your Discr.: 1
-             Min tx interval: 300000     - Min rx interval: 300000
+             Min tx interval: 100000     - Min rx interval: 100000
              Min Echo interval: 0       
 IR-2#
 IR-2#
@@ -425,11 +527,11 @@ IR-2#
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ip bgp neighbors 192.0.2.201 advertised-routes
 ------------------------------------------------------------------------------
 show ip bgp neighbors 192.0.2.201 advertised-routes
-BGP table version is 172, local router ID is 172.16.0.2
+BGP table version is 314, local router ID is 172.16.0.2
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
               r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
               x best-external, a additional-path, c RIB-compressed, 
@@ -448,11 +550,11 @@ IR-2#
 ==============================================================================
 Device: IR-2
 Phase: final state
-Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Captured UTC: 2026-10-25T14:35:34.724465+00:00
 Command: show ip bgp neighbors 203.0.113.1 advertised-routes
 ------------------------------------------------------------------------------
 show ip bgp neighbors 203.0.113.1 advertised-routes
-BGP table version is 172, local router ID is 172.16.0.2
+BGP table version is 314, local router ID is 172.16.0.2
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
               r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
               x best-external, a additional-path, c RIB-compressed, 
@@ -471,26 +573,26 @@ IR-2#
 ==============================================================================
 Device: IR-3
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ip ospf neighbor
 ------------------------------------------------------------------------------
 show ip ospf neighbor
 
 Neighbor ID     Pri   State           Dead Time   Address         Interface
 172.31.0.40       0   FULL/  -        00:00:35    172.31.0.106    Ethernet0/1
-172.31.0.30       0   FULL/  -        00:00:31    172.31.0.102    Ethernet0/0
+172.31.0.30       0   FULL/  -        00:00:33    172.31.0.102    Ethernet0/0
 IR-3#
 IR-3#
 
 ==============================================================================
 Device: IR-3
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ip bgp summary
 ------------------------------------------------------------------------------
 show ip bgp summary
 BGP router identifier 172.31.0.10, local AS number 64509.1
-BGP table version is 43, main routing table version 43
+BGP table version is 59, main routing table version 59
 10 network entries using 1400 bytes of memory
 13 path entries using 1040 bytes of memory
 6/5 BGP path/bestpath attribute entries using 864 bytes of memory
@@ -498,18 +600,18 @@ BGP table version is 43, main routing table version 43
 0 BGP route-map cache entries using 0 bytes of memory
 0 BGP filter-list cache entries using 0 bytes of memory
 BGP using 3376 total bytes of memory
-BGP activity 10/0 prefixes, 23/10 paths, scan interval 60 secs
+BGP activity 10/0 prefixes, 29/16 paths, scan interval 60 secs
 
 Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
-192.0.2.49      4      65000.1     194     191       43    0    0 00:28:57        6
-203.0.113.2     4      65512.1      37      40       43    0    0 00:29:12        3
+192.0.2.49      4      65000.1     826     823       59    0    0 02:08:47        6
+203.0.113.2     4      65512.1      86      90       59    0    0 01:14:02        3
 IR-3#
 IR-3#
 
 ==============================================================================
 Device: IR-3
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show bfd neighbors details
 ------------------------------------------------------------------------------
 show bfd neighbors details
@@ -522,21 +624,21 @@ Session Host: Software
 OurAddr: 203.0.113.1    
 Handle: 1
 Local Diag: 0, Demand mode: 0, Poll bit: 0
-MinTxInt: 300000, MinRxInt: 300000, Multiplier: 3
-Received MinRxInt: 300000, Received Multiplier: 3
-Holddown (hits): 887(0), Hello (hits): 300(6559)
-Rx Count: 6561, Rx Interval (ms) min/max/avg: 1/620/266 last: 13 ms ago
-Tx Count: 6561, Tx Interval (ms) min/max/avg: 1/457/267 last: 241 ms ago
+MinTxInt: 100000, MinRxInt: 100000, Multiplier: 3
+Received MinRxInt: 100000, Received Multiplier: 3
+Holddown (hits): 272(0), Hello (hits): 100(48340)
+Rx Count: 48328, Rx Interval (ms) min/max/avg: 1/262/92 last: 28 ms ago
+Tx Count: 48343, Tx Interval (ms) min/max/avg: 1/253/92 last: 5 ms ago
 Elapsed time watermarks: 0 0 (last: 0)
 Registered protocols: BGP 
-Uptime: 00:29:11
+Uptime: 01:14:02
 Last packet: Version: 1                  - Diagnostic: 0
              State bit: Up               - Demand bit: 0
              Poll bit: 0                 - Final bit: 0
              C bit: 0                                   
              Multiplier: 3               - Length: 24
              My Discr.: 1                - Your Discr.: 1
-             Min tx interval: 300000     - Min rx interval: 300000
+             Min tx interval: 100000     - Min rx interval: 100000
              Min Echo interval: 0       
 IR-3#
 IR-3#
@@ -544,11 +646,11 @@ IR-3#
 ==============================================================================
 Device: IR-3
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ip bgp neighbors 192.0.2.49 advertised-routes
 ------------------------------------------------------------------------------
 show ip bgp neighbors 192.0.2.49 advertised-routes
-BGP table version is 43, local router ID is 172.31.0.10
+BGP table version is 59, local router ID is 172.31.0.10
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
               r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
               x best-external, a additional-path, c RIB-compressed, 
@@ -568,11 +670,11 @@ IR-3#
 ==============================================================================
 Device: IR-3
 Phase: final state
-Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Captured UTC: 2026-10-25T14:35:45.750919+00:00
 Command: show ip bgp neighbors 203.0.113.2 advertised-routes
 ------------------------------------------------------------------------------
 show ip bgp neighbors 203.0.113.2 advertised-routes
-BGP table version is 43, local router ID is 172.31.0.10
+BGP table version is 59, local router ID is 172.31.0.10
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
               r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
               x best-external, a additional-path, c RIB-compressed, 
@@ -592,7 +694,7 @@ IR-3#
 ==============================================================================
 Device: ISP1
 Phase: final state
-Captured UTC: 2026-10-25T12:56:18.614678+00:00
+Captured UTC: 2026-10-25T14:36:09.475814+00:00
 Command: show ip bgp summary
 ------------------------------------------------------------------------------
 show ip bgp summary
@@ -608,8 +710,22 @@ BGP using 3352 total bytes of memory
 BGP activity 10/0 prefixes, 21/8 paths, scan interval 60 secs
 
 Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
-192.0.2.50      4   4227661825     193     196       34    0    0 00:29:17        4
-192.0.2.102     4   4293394433     196     204       34    0    0 00:30:07        3
-192.0.2.202     4   4293394433     279     290       34    0    0 00:43:26        3
+192.0.2.50      4   4227661825     825     828       34    0    0 02:09:09        4
+192.0.2.102     4   4293394433     826     836       34    0    0 02:09:59        3
+192.0.2.202     4   4293394433     907     921       34    0    0 02:23:18        3
+ISP1#
+ISP1#
+
+==============================================================================
+Device: ISP1
+Phase: final state
+Captured UTC: 2026-10-25T14:36:09.475814+00:00
+Command: show ip ospf neighbor
+------------------------------------------------------------------------------
+show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+172.16.0.12       0   FULL/  -        00:00:34    192.0.2.6       Ethernet1/0
+172.16.0.11       0   FULL/  -        00:00:39    192.0.2.2       Ethernet0/3
 ISP1#
 ISP1#

@@ -1,0 +1,146 @@
+{
+  "captured_utc": "2026-10-25T13:21:38.301209+00:00",
+  "method": "Same-router clock upper bound: clock sampled before incoming BFD filter is applied; BGP-down event timestamp uses the same IOS clock in UTC",
+  "clock_before": "do show clock\n21:21:36.679 CST Sun Oct 25 2026\nIR-3(config-if)#\nIR-3(config-if)#",
+  "event_output": "ip access-group BFD_MEASURE in\nIR-3(config-if)#\nIR-3(config-if)#\nOct 25 13:21:37.080: %BGP-5-NBR_RESET: Neighbor 203.0.113.2 reset (BFD adjacency down)\nOct 25 13:21:37.087: %BGP-5-ADJCHANGE: neighbor 203.0.113.2 Down BFD adjacency down\nOct 25 13:21:37.087: %BGP_SESSION-5-ADJCHANGE: neighbor 203.0.113.2 IPv4 Unicast topology base removed from session  BFD adjacency down\nIR-3(config-if)#",
+  "upper_bound_ms": 408.0,
+  "subsecond_observed": true,
+  "restored_bfd_up": true,
+  "commands": [
+    {
+      "name": "IR-2",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\n\nIPv4 Sessions\nNeighAddr                              LD/RD         RH/RS     State     Int\n203.0.113.1                             1/1          Up        Up        Et1/0\nSession state is UP and not using echo function.\nSession Host: Software\nOurAddr: 203.0.113.2    \nHandle: 1\nLocal Diag: 0, Demand mode: 0, Poll bit: 0\nMinTxInt: 100000, MinRxInt: 100000, Multiplier: 3\nReceived MinRxInt: 100000, Received Multiplier: 3\nHolddown (hits): 228(0), Hello (hits): 100(4306)\nRx Count: 4302, Rx Interval (ms) min/max/avg: 1/145/91 last: 72 ms ago\nTx Count: 4309, Tx Interval (ms) min/max/avg: 1/140/91 last: 49 ms ago\nElapsed time watermarks: 0 0 (last: 0)\nRegistered protocols: BGP \nUptime: 00:06:34\nLast packet: Version: 1                  - Diagnostic: 0\n             State bit: Up               - Demand bit: 0\n             Poll bit: 0                 - Final bit: 0\n             C bit: 0                                   \n             Multiplier: 3               - Length: 24\n             My Discr.: 1                - Your Discr.: 1\n             Min tx interval: 100000     - Min rx interval: 100000\n             Min Echo interval: 0       \nIR-2#\nIR-2#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\n\nIPv4 Sessions\nNeighAddr                              LD/RD         RH/RS     State     Int\n203.0.113.2                             1/1          Up        Up        Et0/2\nSession state is UP and not using echo function.\nSession Host: Software\nOurAddr: 203.0.113.1    \nHandle: 1\nLocal Diag: 0, Demand mode: 0, Poll bit: 0\nMinTxInt: 100000, MinRxInt: 100000, Multiplier: 3\nReceived MinRxInt: 100000, Received Multiplier: 3\nHolddown (hits): 271(0), Hello (hits): 100(4303)\nRx Count: 4311, Rx Interval (ms) min/max/avg: 1/155/91 last: 29 ms ago\nTx Count: 4305, Tx Interval (ms) min/max/avg: 1/126/92 last: 35 ms ago\nElapsed time watermarks: 0 0 (last: 0)\nRegistered protocols: BGP \nUptime: 00:06:35\nLast packet: Version: 1                  - Diagnostic: 0\n             State bit: Up               - Demand bit: 0\n             Poll bit: 0                 - Final bit: 0\n             C bit: 0                                   \n             Multiplier: 3               - Length: 24\n             My Discr.: 1                - Your Discr.: 1\n             Min tx interval: 100000     - Min rx interval: 100000\n             Min Echo interval: 0       \nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\n\nIPv4 Sessions\nNeighAddr                              LD/RD         RH/RS     State     Int\n203.0.113.2                             1/1          Up        Up        Et0/2\nSession state is UP and not using echo function.\nSession Host: Software\nOurAddr: 203.0.113.1    \nHandle: 1\nLocal Diag: 0, Demand mode: 0, Poll bit: 0\nMinTxInt: 100000, MinRxInt: 100000, Multiplier: 3\nReceived MinRxInt: 100000, Received Multiplier: 3\nHolddown (hits): 213(0), Hello (hits): 100(4305)\nRx Count: 4312, Rx Interval (ms) min/max/avg: 1/155/91 last: 87 ms ago\nTx Count: 4307, Tx Interval (ms) min/max/avg: 1/126/92 last: 11 ms ago\nElapsed time watermarks: 0 0 (last: 0)\nRegistered protocols: BGP \nUptime: 00:06:35\nLast packet: Version: 1                  - Diagnostic: 0\n             State bit: Up               - Demand bit: 0\n             Poll bit: 0                 - Final bit: 0\n             C bit: 0                                   \n             Multiplier: 3               - Length: 24\n             My Discr.: 1                - Your Discr.: 1\n             Min tx interval: 100000     - Min rx interval: 100000\n             Min Echo interval: 0       \nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "configure terminal",
+      "output": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nIR-3(config)#\nIR-3(config)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "ip access-list extended BFD_MEASURE",
+      "output": "ip access-list extended BFD_MEASURE\nIR-3(config-ext-nacl)#\nIR-3(config-ext-nacl)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "deny udp any any eq 3784",
+      "output": "deny udp any any eq 3784\nIR-3(config-ext-nacl)#\nIR-3(config-ext-nacl)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "permit ip any any",
+      "output": "permit ip any any\nIR-3(config-ext-nacl)#\nIR-3(config-ext-nacl)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "exit",
+      "output": "exit\nIR-3(config)#\nIR-3(config)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "interface Ethernet0/2",
+      "output": "interface Ethernet0/2\nIR-3(config-if)#\nIR-3(config-if)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "do show clock",
+      "output": "do show clock\n21:21:36.679 CST Sun Oct 25 2026\nIR-3(config-if)#\nIR-3(config-if)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "end",
+      "output": "end\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show ip access-lists BFD_MEASURE",
+      "output": "show ip access-lists BFD_MEASURE\nExtended IP access list BFD_MEASURE\n    10 deny udp any any eq 3784 (6 matches)\n    20 permit ip any any (2 matches)\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "configure terminal",
+      "output": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nIR-3(config)#\nIR-3(config)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "interface Ethernet0/2",
+      "output": "interface Ethernet0/2\nIR-3(config-if)#\nIR-3(config-if)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "no ip access-group BFD_MEASURE in",
+      "output": "no ip access-group BFD_MEASURE in\nIR-3(config-if)#\nIR-3(config-if)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "exit",
+      "output": "exit\nIR-3(config)#\nIR-3(config)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "no ip access-list extended BFD_MEASURE",
+      "output": "no ip access-list extended BFD_MEASURE\nIR-3(config)#\nIR-3(config)#"
+    },
+    {
+      "name": "IR-3",
+      "command": "end",
+      "output": "end\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-2",
+      "command": "show bfd neighbors details",
+      "output": "\nOct 25 13:21:37.080: %BGP-5-NBR_RESET: Neighbor 203.0.113.1 reset (BFD adjacency down)\nOct 25 13:21:37.086: %BGP-5-ADJCHANGE: neighbor 203.0.113.1 Down BFD adjacency down\nOct 25 13:21:37.086: %BGP_SESSION-5-ADJCHANGE: neighbor 203.0.113.1 IPv4 Unicast topology base removed from session  BFD adjacency down\nIR-2#show bfd neighbors details\nIR-2#\nIR-2#"
+    },
+    {
+      "name": "IR-2",
+      "command": "clear ip bgp 203.0.113.1",
+      "output": "clear ip bgp 203.0.113.1\nIR-2#\nIR-2#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "clear ip bgp 203.0.113.2",
+      "output": "clear ip bgp 203.0.113.2\nIR-3#\nIR-3#\nOct 25 13:21:38.332: %SYS-5-CONFIG_I: Configured from console by console\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "\nOct 25 13:21:39.419: %SYS-5-CONFIG_I: Configured from console by console\nIR-3#show bfd neighbors details\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\nIR-3#\nIR-3#"
+    },
+    {
+      "name": "IR-3",
+      "command": "show bfd neighbors details",
+      "output": "show bfd neighbors details\n\nIPv4 Sessions\nNeighAddr                              LD/RD         RH/RS     State     Int\n203.0.113.2                             1/1          Up        Up        Et0/2\nSession state is UP and not using echo function.\nSession Host: Software\nOurAddr: 203.0.113.1    \nHandle: 1\nLocal Diag: 0, Demand mode: 0, Poll bit: 0\nMinTxInt: 100000, MinRxInt: 100000, Multiplier: 3\nReceived MinRxInt: 100000, Received Multiplier: 3\nHolddown (hits): 216(0), Hello (hits): 100(11)\nRx Count: 13, Rx Interval (ms) min/max/avg: 1/105/85 last: 84 ms ago\nTx Count: 14, Tx Interval (ms) min/max/avg: 1/102/78 last: 84 ms ago\nElapsed time watermarks: 0 0 (last: 0)\nRegistered protocols: BGP \nUptime: 00:00:01\nLast packet: Version: 1                  - Diagnostic: 0\n             State bit: Up               - Demand bit: 0\n             Poll bit: 0                 - Final bit: 0\n             C bit: 0                                   \n             Multiplier: 3               - Length: 24\n             My Discr.: 1                - Your Discr.: 1\n             Min tx interval: 100000     - Min rx interval: 100000\n             Min Echo interval: 0       \nIR-3#\nIR-3#\nOct 25 13:21:47.208: %BGP-5-ADJCHANGE: neighbor 203.0.113.2 Up \nIR-3#"
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+SELECTED RESILIENCE VALIDATION
+Scope: the named traffic and fault conditions below.
+
+========================================================================
+Device: IR-3
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:24:51.650046+00:00
+Command: show ip bgp summary
+------------------------------------------------------------------------
+show ip bgp summary
+BGP router identifier 172.31.0.10, local AS number 64509.1
+BGP table version is 20, main routing table version 20
+10 network entries using 1400 bytes of memory
+10 path entries using 800 bytes of memory
+6/5 BGP path/bestpath attribute entries using 864 bytes of memory
+3 BGP AS-PATH entries using 72 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 3136 total bytes of memory
+BGP activity 10/0 prefixes, 13/3 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.0.2.49      4      65000.1      91      87       20    0    0 00:13:20        6
+203.0.113.2     4      65512.1       0       0        1    0    0 00:00:08 Idle
+IR-3#
+IR-3#
+
+========================================================================
+Device: VPC17
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:24:59.610988+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=58 time=3.321 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=58 time=2.335 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=58 time=2.669 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=58 time=2.670 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=58 time=2.988 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC19
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:25:07.584679+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.334 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=2.605 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=3.288 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=3.299 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=2.744 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC19
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:25:12.831839+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=5.849 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=4.952 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=2.787 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=59 time=3.192 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=59 time=3.788 ms
+
+VPCS> 
+
+========================================================================
+Device: IR-1
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:25:21.145258+00:00
+Command: show ip nat translations
+------------------------------------------------------------------------
+show ip nat translations
+Pro Inside global         Inside local          Outside local         Outside global
+icmp 192.0.2.100:7925     172.22.100.100:7925   203.0.113.100:7925    203.0.113.100:7925
+icmp 192.0.2.100:8181     172.22.100.100:8181   203.0.113.100:8181    203.0.113.100:8181
+icmp 192.0.2.100:8437     172.22.100.100:8437   203.0.113.100:8437    203.0.113.100:8437
+icmp 192.0.2.100:8693     172.22.100.100:8693   203.0.113.100:8693    203.0.113.100:8693
+icmp 192.0.2.100:8949     172.22.100.100:8949   203.0.113.100:8949    203.0.113.100:8949
+--- 192.0.2.100           172.22.100.100        ---                   ---
+IR-1#
+IR-1#
+
+========================================================================
+Device: IR-2
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:25:21.406583+00:00
+Command: show ip nat translations
+------------------------------------------------------------------------
+
+Oct 25 12:24:42.539: %BGP-5-NBR_RESET: Neighbor 203.0.113.1 reset (Interface flap)
+Oct 25 12:24:42.540: %BGP-5-ADJCHANGE: neighbor 203.0.113.1 Down Interface flap
+Oct 25 12:24:42.540: %BGP_SESSION-5-ADJCHANGE: neighbor 203.0.113.1 IPv4 Unicast topology base removed from session  Interface flap
+Oct 25 12:24:42.795: %SYS-5-CONFIG_I: Configured from console by console
+IR-2#
+Oct 25 12:24:44.533: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+Oct 25 12:24:45.539: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+IR-2#show ip nat translations
+Pro Inside global         Inside local          Outside local         Outside global
+--- 192.0.2.200           172.22.100.100        ---                   ---
+IR-2#
+IR-2#
+
+========================================================================
+Device: ISP1
+Test condition: direct-link-down
+Captured UTC: 2026-10-25T12:25:25.738557+00:00
+Command: show ip bgp 172.16.0.0/16
+------------------------------------------------------------------------
+show ip bgp 172.16.0.0/16
+BGP routing table entry for 172.16.0.0/16, version 11
+Paths: (2 available, best #1, table default)
+  Advertised to update-groups:
+     1         
+  Refresh Epoch 1
+  4293394433, (aggregated by 4293394433 172.16.0.1)
+    192.0.2.102 from 192.0.2.102 (172.16.0.1)
+      Origin IGP, metric 100, localpref 100, valid, external, atomic-aggregate, best
+      rx pathid: 0, tx pathid: 0x0
+  Refresh Epoch 1
+  4293394433, (aggregated by 4293394433 172.16.0.2)
+    192.0.2.202 from 192.0.2.202 (172.16.0.2)
+      Origin IGP, metric 1000, localpref 100, valid, external, atomic-aggregate
+      rx pathid: 0, tx pathid: 0
+ISP1#
+ISP1#
+
+========================================================================
+Device: DS1
+Test condition: primary-internet-down
+Captured UTC: 2026-10-25T12:25:36.125509+00:00
+Command: show ip route 0.0.0.0
+------------------------------------------------------------------------
+show ip route 0.0.0.0
+Routing entry for 0.0.0.0/0, supernet
+  Known via "eigrp 2026", distance 170, metric 513024000, candidate default path
+  Tag 4259840001, type external
+  Redistributing via eigrp 2026
+  Last update from 172.16.0.125 on Ethernet0/0, 00:00:09 ago
+  Routing Descriptor Blocks:
+  * 172.16.0.137, from 172.16.0.137, 00:00:09 ago, via Ethernet0/3
+      Route metric is 513024000, traffic share count is 1
+      Total delay is 1002000 microseconds, minimum bandwidth is 10000 Kbit
+      Reliability 255/255, minimum MTU 1500 bytes
+      Loading 1/255, Hops 2
+      Route tag 4259840001
+    172.16.0.125, from 172.16.0.125, 00:00:09 ago, via Ethernet0/0
+      Route metric is 513024000, traffic share count is 1
+      Total delay is 1002000 microseconds, minimum bandwidth is 10000 Kbit
+      Reliability 255/255, minimum MTU 1500 bytes
+      Loading 1/255, Hops 2
+      Route tag 4259840001
+DS1#
+DS1#
+
+========================================================================
+Device: VPC18
+Test condition: primary-internet-down
+Captured UTC: 2026-10-25T12:25:50.352885+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=252 time=1.669 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=252 time=1.470 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=252 time=2.055 ms
+84 bytes from 8.8.8.8 icmp_seq=4 ttl=252 time=2.018 ms
+84 bytes from 8.8.8.8 icmp_seq=5 ttl=252 time=3.623 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC19
+Test condition: primary-internet-down
+Captured UTC: 2026-10-25T12:25:55.597061+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.311 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=3.009 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=3.301 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=2.948 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=3.200 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC19
+Test condition: primary-internet-down
+Captured UTC: 2026-10-25T12:26:00.838421+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=4.305 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=2.647 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=3.919 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=59 time=3.307 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=59 time=2.898 ms
+
+VPCS> 
+
+========================================================================
+Device: IR-2
+Test condition: primary-internet-down
+Captured UTC: 2026-10-25T12:26:01.068802+00:00
+Command: show ip nat translations
+------------------------------------------------------------------------
+show ip nat translations
+Pro Inside global         Inside local          Outside local         Outside global
+icmp 192.0.2.194:18933    172.16.102.178:18933  8.8.8.8:18933         8.8.8.8:18933
+icmp 192.0.2.194:19189    172.16.102.178:19189  8.8.8.8:19189         8.8.8.8:19189
+icmp 192.0.2.194:19445    172.16.102.178:19445  8.8.8.8:19445         8.8.8.8:19445
+icmp 192.0.2.194:19701    172.16.102.178:19701  8.8.8.8:19701         8.8.8.8:19701
+icmp 192.0.2.194:19957    172.16.102.178:19957  8.8.8.8:19957         8.8.8.8:19957
+icmp 192.0.2.194:16629    172.16.103.200:16629  8.8.8.8:16629         8.8.8.8:16629
+icmp 192.0.2.194:17141    172.16.103.200:17141  8.8.8.8:17141         8.8.8.8:17141
+icmp 192.0.2.194:17397    172.16.103.200:17397  8.8.8.8:17397         8.8.8.8:17397
+icmp 192.0.2.194:17653    172.16.103.200:17653  8.8.8.8:17653         8.8.8.8:17653
+icmp 192.0.2.194:17909    172.16.103.200:17909  8.8.8.8:17909         8.8.8.8:17909
+icmp 192.0.2.200:20213    172.22.100.100:20213  203.0.113.100:20213   203.0.113.100:20213
+icmp 192.0.2.200:20469    172.22.100.100:20469  203.0.113.100:20469   203.0.113.100:20469
+icmp 192.0.2.200:20725    172.22.100.100:20725  203.0.113.100:20725   203.0.113.100:20725
+icmp 192.0.2.200:20981    172.22.100.100:20981  203.0.113.100:20981   203.0.113.100:20981
+icmp 192.0.2.200:21237    172.22.100.100:21237  203.0.113.100:21237   203.0.113.100:21237
+--- 192.0.2.200           172.22.100.100        ---                   ---
+IR-2#
+IR-2#
+
+========================================================================
+Device: DS1
+Test condition: primary-internet-restored
+Captured UTC: 2026-10-25T12:26:21.704702+00:00
+Command: show ip route 0.0.0.0
+------------------------------------------------------------------------
+
+Oct 25 12:25:44.301: %CDP-4-DUPLEX_MISMATCH: duplex mismatch discovered on Ethernet0/0 (not half duplex), with CR-1.wsc2026.net Ethernet0/1 (half duplex).
+DS1#
+Oct 25 12:25:55.583: %CDP-4-DUPLEX_MISMATCH: duplex mismatch discovered on Ethernet0/3 (not half duplex), with CR-2.wsc2026.net Ethernet1/0 (half duplex).
+DS1#show ip route 0.0.0.0
+Routing entry for 0.0.0.0/0, supernet
+  Known via "eigrp 2026", distance 170, metric 1536000, candidate default path
+  Tag 4259840001, type external
+  Redistributing via eigrp 2026
+  Last update from 172.16.0.137 on Ethernet0/3, 00:00:10 ago
+  Routing Descriptor Blocks:
+    172.16.0.137, from 172.16.0.137, 00:00:10 ago, via Ethernet0/3
+      Route metric is 1536000, traffic share count is 1
+      Total delay is 3000 microseconds, minimum bandwidth is 10000 Kbit
+      Reliability 255/255, minimum MTU 1500 bytes
+      Loading 1/255, Hops 2
+      Route tag 4259840001
+  * 172.16.0.125, from 172.16.0.125, 00:00:10 ago, via Ethernet0/0
+      Route metric is 1536000, traffic share count is 1
+      Total delay is 3000 microseconds, minimum bandwidth is 10000 Kbit
+      Reliability 255/255, minimum MTU 1500 bytes
+      Loading 1/255, Hops 2
+      Route tag 4259840001
+DS1#
+DS1#
+
+========================================================================
+Device: VPC17
+Test condition: primary-internet-restored
+Captured UTC: 2026-10-25T12:26:26.941054+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=252 time=4.627 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=252 time=2.639 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=252 time=3.447 ms
+84 bytes from 8.8.8.8 icmp_seq=4 ttl=252 time=1.876 ms
+84 bytes from 8.8.8.8 icmp_seq=5 ttl=252 time=2.303 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC19
+Test condition: primary-internet-restored
+Captured UTC: 2026-10-25T12:26:32.181649+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.857 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=2.767 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=2.306 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=2.356 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=2.383 ms
+
+VPCS> 
+
+========================================================================
+Device: IR-1
+Test condition: primary-internet-restored
+Captured UTC: 2026-10-25T12:26:32.442665+00:00
+Command: show ip nat translations
+------------------------------------------------------------------------
+
+.Oct 25 12:26:06.184: %SYS-5-CONFIG_I: Configured from console by console
+IR-1#
+.Oct 25 12:26:07.927: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+.Oct 25 12:26:08.931: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to up
+IR-1#
+.Oct 25 12:26:11.421: %BGP-5-NBR_RESET: Neighbor 192.0.2.101 active reset (BGP Notification sent)
+.Oct 25 12:26:11.421: %BGP-5-ADJCHANGE: neighbor 192.0.2.101 Up 
+IR-1#
+.Oct 25 12:26:12.566: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to up
+IR-1#
+.Oct 25 12:26:13.833: %DUAL-5-NBRCHANGE: EIGRP-IPv4 2026: Neighbor 172.16.1.102 (Tunnel0) is up: new adjacency
+.Oct 25 12:26:14.188: %DUAL-5-NBRCHANGE: EIGRP-IPv4 2026: Neighbor 172.16.1.101 (Tunnel0) is up: new adjacency
+IR-1#show ip nat translations
+Pro Inside global         Inside local          Outside local         Outside global
+icmp 192.0.2.104:28149    172.16.103.200:28149  8.8.8.8:28149         8.8.8.8:28149
+icmp 192.0.2.104:28405    172.16.103.200:28405  8.8.8.8:28405         8.8.8.8:28405
+icmp 192.0.2.104:28661    172.16.103.200:28661  8.8.8.8:28661         8.8.8.8:28661
+icmp 192.0.2.104:28917    172.16.103.200:28917  8.8.8.8:28917         8.8.8.8:28917
+icmp 192.0.2.104:29173    172.16.103.200:29173  8.8.8.8:29173         8.8.8.8:29173
+--- 192.0.2.100           172.22.100.100        ---                   ---
+IR-1#
+IR-1#
+
+========================================================================
+Device: DS1
+Test condition: lacp-member-both-ends-down
+Captured UTC: 2026-10-25T12:50:08.927725+00:00
+Command: show etherchannel summary
+------------------------------------------------------------------------
+
+Oct 25 12:50:01.371: %SYS-5-CONFIG_I: Configured from console by console
+DS1#
+Oct 25 12:50:03.108: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+Oct 25 12:50:04.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+DS1#show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+12     Po12(SU)        LACP      Et1/0(D)    Et1/1(P)    
+
+DS1#
+DS1#
+
+========================================================================
+Device: DS2
+Test condition: lacp-member-both-ends-down
+Captured UTC: 2026-10-25T12:50:09.192002+00:00
+Command: show etherchannel summary
+------------------------------------------------------------------------
+
+Oct 25 12:50:02.416: %SYS-5-CONFIG_I: Configured from console by console
+DS2#
+Oct 25 12:50:04.163: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+DS2#
+Oct 25 12:50:05.167: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+DS2#show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+12     Po12(SU)        LACP      Et1/0(D)    Et1/1(P)    
+
+DS2#
+DS2#
+
+========================================================================
+Device: VPC17
+Test condition: lacp-member-both-ends-down
+Captured UTC: 2026-10-25T12:50:14.434084+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.093 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=2.631 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=2.462 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=2.461 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=2.997 ms
+
+VPCS> 
+
+========================================================================
+Device: DS2
+Test condition: fault
+Captured UTC: 2026-10-25T13:33:48.300667+00:00
+Command: show udld neighbors
+------------------------------------------------------------------------
+
+Oct 25 13:33:29.861: %DUAL-5-NBRCHANGE: EIGRP-IPv6 2026: Neighbor FE80::A8BB:CCFF:FE80:8000 (Vlan999) is down: Interface PEER-TERMINATION received
+DS2#
+Oct 25 13:33:32.498: %DUAL-5-NBRCHANGE: EIGRP-IPv4 2026: Neighbor 172.16.0.141 (Vlan999) is down: Interface PEER-TERMINATION received
+DS2#
+Oct 25 13:33:34.682: %DUAL-5-NBRCHANGE: EIGRP-IPv6 2026: Neighbor FE80::A8BB:CCFF:FE80:8000 (Vlan999) is up: new adjacency
+DS2#
+Oct 25 13:33:36.868: %DUAL-5-NBRCHANGE: EIGRP-IPv4 2026: Neighbor 172.16.0.141 (Vlan999) is up: new adjacency
+DS2#
+Oct 25 13:33:42.426: %UDLD-4-UDLD_PORT_DISABLED: UDLD disabled interface Et1/0, aggressive mode failure detected
+Oct 25 13:33:42.426: %PM-4-ERR_DISABLE: udld error detected on Et1/0, putting Et1/0 in err-disable state
+Oct 25 13:33:43.430: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+DS2#
+Oct 25 13:33:44.430: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to down
+DS2#show udld neighbors
+Port     Device Name   Device ID     Port ID    Neighbor State
+----     -----------   ---------     -------    --------------
+Et1/1    67108992        1            Et1/1      Bidirectional  
+DS2#
+DS2#
+
+========================================================================
+Device: DS2
+Test condition: fault
+Captured UTC: 2026-10-25T13:33:48.563439+00:00
+Command: show interfaces status err-disabled
+------------------------------------------------------------------------
+show interfaces status err-disabled
+
+Port      Name               Status       Reason               Err-disabled Vlans
+Et1/0                        err-disabled udld
+DS2#
+DS2#
+
+========================================================================
+Device: DS2
+Test condition: fault
+Captured UTC: 2026-10-25T13:33:48.825597+00:00
+Command: show etherchannel summary
+------------------------------------------------------------------------
+show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+12     Po12(SU)        LACP      Et1/0(D)    Et1/1(P)    
+
+DS2#
+DS2#
+
+========================================================================
+Device: VPC17
+Test condition: fault
+Captured UTC: 2026-10-25T13:33:54.060568+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.326 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=2.602 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=2.398 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=2.054 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=3.448 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC22
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:30:44.729005+00:00
+Command: ping 203.0.113.97 -c 3
+------------------------------------------------------------------------
+ping 203.0.113.97 -c 3
+
+84 bytes from 203.0.113.97 icmp_seq=1 ttl=255 time=1.161 ms
+84 bytes from 203.0.113.97 icmp_seq=2 ttl=255 time=5.251 ms
+84 bytes from 203.0.113.97 icmp_seq=3 ttl=255 time=0.724 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC22
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:30:47.971494+00:00
+Command: ping 203.0.113.99 -c 3
+------------------------------------------------------------------------
+ping 203.0.113.99 -c 3
+
+84 bytes from 203.0.113.99 icmp_seq=1 ttl=255 time=1.566 ms
+84 bytes from 203.0.113.99 icmp_seq=2 ttl=255 time=0.643 ms
+84 bytes from 203.0.113.99 icmp_seq=3 ttl=255 time=0.648 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC22
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:30:51.208891+00:00
+Command: ping 172.16.103.200 -c 3
+------------------------------------------------------------------------
+ping 172.16.103.200 -c 3
+
+84 bytes from 172.16.103.200 icmp_seq=1 ttl=58 time=3.147 ms
+84 bytes from 172.16.103.200 icmp_seq=2 ttl=58 time=3.332 ms
+84 bytes from 172.16.103.200 icmp_seq=3 ttl=58 time=2.665 ms
+
+VPCS> 
+
+========================================================================
+Device: DS4
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:30:55.535244+00:00
+Command: show standby brief
+------------------------------------------------------------------------
+show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl200       200  100 P Standby 203.0.113.66    local           203.0.113.65
+Vl201       201  100 P Active  local           unknown         203.0.113.97
+Vl202       202  100 P Standby 203.0.113.130   local           203.0.113.129
+DS4#
+DS4#
+
+========================================================================
+Device: IR-3
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:31:00.119080+00:00
+Command: show ip route 203.0.113.100
+------------------------------------------------------------------------
+show ip route 203.0.113.100
+Routing entry for 203.0.113.0/24
+  Known via "ospf 100", distance 110, metric 11, type inter area
+  Advertised by bgp 64509.1
+  Last update from 172.31.0.106 on Ethernet0/1, 00:05:36 ago
+  Routing Descriptor Blocks:
+  * 172.31.0.106, from 172.31.0.40, 00:05:36 ago, via Ethernet0/1
+      Route metric is 11, traffic share count is 1
+IR-3#
+IR-3#
+
+========================================================================
+Device: DS4
+Test condition: DS3-down
+Captured UTC: 2026-10-25T13:31:00.380793+00:00
+Command: ping 172.16.103.200 source Vlan201 repeat 3
+------------------------------------------------------------------------
+ping 172.16.103.200 source Vlan201 repeat 3
+Type escape sequence to abort.
+Sending 3, 100-byte ICMP Echos to 172.16.103.200, timeout is 2 seconds:
+Packet sent with a source address of 203.0.113.99 
+!!!
+Success rate is 100 percent (3/3), round-trip min/avg/max = 2/2/3 ms
+DS4#
+
+========================================================================
+Device: VPC22
+Test condition: DS4-down
+Captured UTC: 2026-10-25T13:31:40.121129+00:00
+Command: ping 203.0.113.97 -c 3
+------------------------------------------------------------------------
+ping 203.0.113.97 -c 3
+
+84 bytes from 203.0.113.97 icmp_seq=1 ttl=255 time=0.443 ms
+84 bytes from 203.0.113.97 icmp_seq=2 ttl=255 time=0.419 ms
+84 bytes from 203.0.113.97 icmp_seq=3 ttl=255 time=0.390 ms
+
+VPCS> 
+
+========================================================================
+Device: VPC22
+Test condition: DS4-down
+Captured UTC: 2026-10-25T13:31:49.576439+00:00
+Command: ping 172.16.103.200 -c 3
+------------------------------------------------------------------------
+ping 172.16.103.200 -c 3
+
+84 bytes from 172.16.103.200 icmp_seq=1 ttl=58 time=4.544 ms
+84 bytes from 172.16.103.200 icmp_seq=2 ttl=58 time=3.052 ms
+84 bytes from 172.16.103.200 icmp_seq=3 ttl=58 time=2.405 ms
+
+VPCS> 
+
+========================================================================
+Device: DS4
+Test condition: DS4-down
+Captured UTC: 2026-10-25T13:31:49.837413+00:00
+Command: show standby brief
+------------------------------------------------------------------------
+
+Oct 25 13:31:21.404: %TRACK-6-STATE: 201 interface Vl201 line-protocol Up -> Down
+Oct 25 13:31:21.664: %SYS-5-CONFIG_I: Configured from console by console
+DS4#
+Oct 25 13:31:22.229: %TRACK-6-STATE: 299 list boolean and Up -> Down
+Oct 25 13:31:22.928: %SYS-5-CONFIG_I: Configured from console by admin on vty0 (EEM:DC_SUMMARY_DOWN)
+Oct 25 13:31:22.933: %HA_EM-6-LOG: DC_SUMMARY_DOWN: DC summary guard: DOWN
+DS4#
+Oct 25 13:31:23.407: %LINK-5-CHANGED: Interface Vlan201, changed state to administratively down
+Oct 25 13:31:24.410: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan201, changed state to down
+Oct 25 13:31:24.410: %HSRP-5-STATECHANGE: Vlan201 Grp 201 state Standby -> Init
+DS4#show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl200       200  100 P Standby 203.0.113.66    local           203.0.113.65
+Vl201       201  100 P Init    unknown         unknown         203.0.113.97
+Vl202       202  100 P Standby 203.0.113.130   local           203.0.113.129
+DS4#
+DS4#
+
+========================================================================
+Device: IR-3
+Test condition: DS4-down
+Captured UTC: 2026-10-25T13:31:50.362497+00:00
+Command: show ip route 203.0.113.100
+------------------------------------------------------------------------
+show ip route 203.0.113.100
+Routing entry for 203.0.113.0/24
+  Known via "ospf 100", distance 110, metric 11, type inter area
+  Advertised by bgp 64509.1
+  Last update from 172.31.0.102 on Ethernet0/0, 00:00:49 ago
+  Routing Descriptor Blocks:
+  * 172.31.0.102, from 172.31.0.30, 00:00:49 ago, via Ethernet0/0
+      Route metric is 11, traffic share count is 1
+IR-3#
+IR-3#

@@ -1,7 +1,7 @@
 [
   {
     "device": "AS1",
-    "captured_utc": "2026-10-25T12:56:09.713453+00:00",
+    "captured_utc": "2026-10-25T14:36:00.582155+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -12,7 +12,7 @@
   },
   {
     "device": "AS2",
-    "captured_utc": "2026-10-25T12:56:14.790287+00:00",
+    "captured_utc": "2026-10-25T14:36:06.271812+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -23,7 +23,7 @@
   },
   {
     "device": "AS3",
-    "captured_utc": "2026-10-25T12:56:16.179307+00:00",
+    "captured_utc": "2026-10-25T14:36:06.394658+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -34,7 +34,7 @@
   },
   {
     "device": "AS4",
-    "captured_utc": "2026-10-25T12:56:16.840297+00:00",
+    "captured_utc": "2026-10-25T14:36:08.872310+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -45,7 +45,7 @@
   },
   {
     "device": "BR-1",
-    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "captured_utc": "2026-10-25T14:35:34.724465+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -56,7 +56,7 @@
   },
   {
     "device": "BR-2",
-    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "captured_utc": "2026-10-25T14:35:34.709256+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -67,7 +67,7 @@
   },
   {
     "device": "CR-1",
-    "captured_utc": "2026-10-25T12:55:55.382963+00:00",
+    "captured_utc": "2026-10-25T14:35:45.750919+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -78,7 +78,7 @@
   },
   {
     "device": "CR-2",
-    "captured_utc": "2026-10-25T12:55:56.920377+00:00",
+    "captured_utc": "2026-10-25T14:35:46.137154+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -89,7 +89,7 @@
   },
   {
     "device": "DS1",
-    "captured_utc": "2026-10-25T12:55:57.335397+00:00",
+    "captured_utc": "2026-10-25T14:35:46.475671+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -100,7 +100,7 @@
   },
   {
     "device": "DS2",
-    "captured_utc": "2026-10-25T12:56:04.442591+00:00",
+    "captured_utc": "2026-10-25T14:35:54.770601+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -111,7 +111,7 @@
   },
   {
     "device": "DS3",
-    "captured_utc": "2026-10-25T12:56:04.797425+00:00",
+    "captured_utc": "2026-10-25T14:35:55.154270+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -122,7 +122,7 @@
   },
   {
     "device": "DS4",
-    "captured_utc": "2026-10-25T12:56:06.017122+00:00",
+    "captured_utc": "2026-10-25T14:35:55.230962+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -133,7 +133,7 @@
   },
   {
     "device": "IR-1",
-    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "captured_utc": "2026-10-25T14:35:34.709256+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -144,7 +144,7 @@
   },
   {
     "device": "IR-2",
-    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "captured_utc": "2026-10-25T14:35:34.724465+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -155,7 +155,7 @@
   },
   {
     "device": "IR-3",
-    "captured_utc": "2026-10-25T12:55:55.367681+00:00",
+    "captured_utc": "2026-10-25T14:35:45.750919+00:00",
     "timezone_CST_UTC8": true,
     "admin_privilege15_type8": true,
     "enable_secret_type8": true,
@@ -166,7 +166,9 @@
   },
   {
     "device": "ISP1",
-    "captured_utc": "2026-10-25T12:56:18.614678+00:00",
-    "configuration_unchanged": true
+    "captured_utc": "2026-10-25T14:36:09.475814+00:00",
+    "reviewed_custom_practice_underlay": true,
+    "running_matches_startup": true,
+    "branch_underlay_ospf200": true
   }
 ]

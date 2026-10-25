@@ -3,7 +3,7 @@ SELECTED SWITCHING AND GATEWAY OUTPUTS
 ==============================================================================
 Device: AS1
 Phase: final state
-Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Captured UTC: 2026-10-25T14:36:00.582155+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -29,7 +29,7 @@ AS1#
 ==============================================================================
 Device: AS1
 Phase: final state
-Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Captured UTC: 2026-10-25T14:36:00.582155+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -49,7 +49,7 @@ AS1#
 ==============================================================================
 Device: AS1
 Phase: final state
-Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Captured UTC: 2026-10-25T14:36:00.582155+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -65,7 +65,7 @@ AS1#
 ==============================================================================
 Device: AS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Captured UTC: 2026-10-25T14:36:06.271812+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -91,7 +91,7 @@ AS2#
 ==============================================================================
 Device: AS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Captured UTC: 2026-10-25T14:36:06.271812+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -111,7 +111,7 @@ AS2#
 ==============================================================================
 Device: AS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Captured UTC: 2026-10-25T14:36:06.271812+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -127,7 +127,7 @@ AS2#
 ==============================================================================
 Device: AS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Captured UTC: 2026-10-25T14:36:06.394658+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -149,7 +149,7 @@ AS3#
 ==============================================================================
 Device: AS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Captured UTC: 2026-10-25T14:36:06.394658+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -169,7 +169,7 @@ AS3#
 ==============================================================================
 Device: AS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Captured UTC: 2026-10-25T14:36:06.394658+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -185,7 +185,7 @@ AS3#
 ==============================================================================
 Device: AS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Captured UTC: 2026-10-25T14:36:08.872310+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -207,7 +207,7 @@ AS4#
 ==============================================================================
 Device: AS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Captured UTC: 2026-10-25T14:36:08.872310+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -227,7 +227,7 @@ AS4#
 ==============================================================================
 Device: AS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Captured UTC: 2026-10-25T14:36:08.872310+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -243,7 +243,7 @@ AS4#
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -273,7 +273,7 @@ DS1#
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -294,7 +294,7 @@ DS1#
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -310,7 +310,7 @@ DS1#
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show standby brief
 ------------------------------------------------------------------------------
 show standby brief
@@ -331,7 +331,7 @@ DS1#
 ==============================================================================
 Device: DS1
 Phase: final state
-Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Captured UTC: 2026-10-25T14:35:46.475671+00:00
 Command: show etherchannel summary
 ------------------------------------------------------------------------------
 show etherchannel summary
@@ -364,7 +364,7 @@ DS1#
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -394,7 +394,7 @@ DS2#
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -415,7 +415,7 @@ DS2#
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -431,7 +431,7 @@ DS2#
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show standby brief
 ------------------------------------------------------------------------------
 show standby brief
@@ -448,11 +448,13 @@ Vl103       1103 100 P Standby FE80::A8BB:CCFF:FE80:8000
                                                local           FE80::FE80
 DS2#
 DS2#
+Oct 25 14:36:00.007: %DUAL-5-NBRCHANGE: EIGRP-IPv4 2026: Neighbor 172.16.0.133 (Ethernet0/0) is down: retry limit exceeded
+DS2#
 
 ==============================================================================
 Device: DS2
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Captured UTC: 2026-10-25T14:35:54.770601+00:00
 Command: show etherchannel summary
 ------------------------------------------------------------------------------
 show etherchannel summary
@@ -485,7 +487,7 @@ DS2#
 ==============================================================================
 Device: DS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -507,7 +509,7 @@ DS3#
 ==============================================================================
 Device: DS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -526,7 +528,7 @@ DS3#
 ==============================================================================
 Device: DS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -542,7 +544,7 @@ DS3#
 ==============================================================================
 Device: DS3
 Phase: final state
-Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Captured UTC: 2026-10-25T14:35:55.154270+00:00
 Command: show standby brief
 ------------------------------------------------------------------------------
 show standby brief
@@ -558,7 +560,7 @@ DS3#
 ==============================================================================
 Device: DS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
 Command: show interfaces trunk
 ------------------------------------------------------------------------------
 show interfaces trunk
@@ -580,7 +582,7 @@ DS4#
 ==============================================================================
 Device: DS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
 Command: show spanning-tree root
 ------------------------------------------------------------------------------
 show spanning-tree root
@@ -599,7 +601,7 @@ DS4#
 ==============================================================================
 Device: DS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
 Command: show spanning-tree inconsistentports
 ------------------------------------------------------------------------------
 show spanning-tree inconsistentports
@@ -615,7 +617,7 @@ DS4#
 ==============================================================================
 Device: DS4
 Phase: final state
-Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Captured UTC: 2026-10-25T14:35:55.230962+00:00
 Command: show standby brief
 ------------------------------------------------------------------------------
 show standby brief
