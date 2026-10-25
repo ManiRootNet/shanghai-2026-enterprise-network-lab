@@ -1,0 +1,188 @@
+FINAL DMVPN PHASE 3 VALIDATION
+Dynamic peer NBMA addresses and NHRP routes are included.
+
+==============================================================================
+Device: BR-1
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.493130+00:00
+Command: ping 172.22.100.11 source 172.21.100.1 repeat 8
+------------------------------------------------------------------------------
+ping 172.22.100.11 source 172.21.100.1 repeat 8
+Type escape sequence to abort.
+Sending 8, 100-byte ICMP Echos to 172.22.100.11, timeout is 2 seconds:
+Packet sent with a source address of 172.21.100.1 
+!!!!!!!!
+Success rate is 100 percent (8/8), round-trip min/avg/max = 1/2/4 ms
+BR-1#
+
+==============================================================================
+Device: BR-1
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.493130+00:00
+Command: ping 172.16.0.12 source 172.16.0.11 repeat 8
+------------------------------------------------------------------------------
+ping 172.16.0.12 source 172.16.0.11 repeat 8
+Type escape sequence to abort.
+Sending 8, 100-byte ICMP Echos to 172.16.0.12, timeout is 2 seconds:
+Packet sent with a source address of 172.16.0.11 
+!!!!!!!!
+Success rate is 100 percent (8/8), round-trip min/avg/max = 1/2/7 ms
+BR-1#
+
+==============================================================================
+Device: BR-1
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.493130+00:00
+Command: show ip nhrp
+------------------------------------------------------------------------------
+show ip nhrp
+172.16.0.11/32 via 172.16.1.101
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router unique local 
+   NBMA address: 192.0.2.2 
+    (no-socket) 
+172.16.0.12/32 via 172.16.1.102
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router rib 
+   NBMA address: 192.0.2.6 
+172.16.1.1/32 via 172.16.1.1
+   Tunnel0 created 00:22:09, never expire 
+   Type: static, Flags: used 
+   NBMA address: 192.0.2.102 
+172.16.1.2/32 via 172.16.1.2
+   Tunnel0 created 00:22:09, never expire 
+   Type: static, Flags: used 
+   NBMA address: 192.0.2.202 
+172.16.1.102/32 via 172.16.1.102
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router used nhop rib 
+   NBMA address: 192.0.2.6 
+172.21.100.0/24 via 172.16.1.101
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router unique local 
+   NBMA address: 192.0.2.2 
+    (no-socket) 
+172.22.100.0/24 via 172.16.1.102
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router rib 
+   NBMA address: 192.0.2.6 
+BR-1#
+BR-1#
+
+==============================================================================
+Device: BR-1
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.493130+00:00
+Command: show dmvpn
+------------------------------------------------------------------------------
+show dmvpn
+Legend: Attrb --> S - Static, D - Dynamic, I - Incomplete
+	N - NATed, L - Local, X - No Socket
+	# Ent --> Number of NHRP entries with same NBMA peer
+	NHS Status: E --> Expecting Replies, R --> Responding, W --> Waiting
+	UpDn Time --> Up or Down Time for a Tunnel
+==========================================================================
+
+Interface: Tunnel0, IPv4 NHRP Details 
+Type:Spoke, NHRP Peers:3, 
+
+ # Ent  Peer NBMA Addr Peer Tunnel Add State  UpDn Tm Attrb
+ ----- --------------- --------------- ----- -------- -----
+     3 192.0.2.6          172.16.1.102    UP 00:00:01   DT1
+                          172.16.1.102    UP 00:00:01   DT1
+                          172.16.1.102    UP 00:00:01   DT1
+     1 192.0.2.102          172.16.1.1    UP 00:20:12     S
+     1 192.0.2.202          172.16.1.2    UP 00:20:17     S
+
+BR-1#
+BR-1#
+
+==============================================================================
+Device: BR-1
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.493130+00:00
+Command: show ip route 172.22.100.11
+------------------------------------------------------------------------------
+show ip route 172.22.100.11
+Routing entry for 172.22.100.0/24
+  Known via "nhrp", distance 250, metric 1
+  Last update from 172.16.1.102 on Tunnel0, 00:00:02 ago
+  Routing Descriptor Blocks:
+  * 172.16.1.102, from 172.16.1.102, 00:00:02 ago, via Tunnel0
+      Route metric is 1, traffic share count is 1
+      MPLS label: none
+BR-1#
+BR-1#
+
+==============================================================================
+Device: BR-2
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.477675+00:00
+Command: ping 172.21.100.11 source 172.22.100.1 repeat 8
+------------------------------------------------------------------------------
+ping 172.21.100.11 source 172.22.100.1 repeat 8
+Type escape sequence to abort.
+Sending 8, 100-byte ICMP Echos to 172.21.100.11, timeout is 2 seconds:
+Packet sent with a source address of 172.22.100.1 
+!!!!!!!!
+Success rate is 100 percent (8/8), round-trip min/avg/max = 2/3/5 ms
+BR-2#
+
+==============================================================================
+Device: BR-2
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.477675+00:00
+Command: show ip nhrp
+------------------------------------------------------------------------------
+show ip nhrp
+172.16.1.1/32 via 172.16.1.1
+   Tunnel0 created 00:22:08, never expire 
+   Type: static, Flags: used 
+   NBMA address: 192.0.2.102 
+172.16.1.2/32 via 172.16.1.2
+   Tunnel0 created 00:22:08, never expire 
+   Type: static, Flags: used 
+   NBMA address: 192.0.2.202 
+172.16.1.101/32 via 172.16.1.101
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router nhop rib 
+   NBMA address: 192.0.2.2 
+172.21.100.0/24 via 172.16.1.101
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router rib 
+   NBMA address: 192.0.2.2 
+172.22.100.0/24 via 172.16.1.102
+   Tunnel0 created 00:00:00, expire 01:59:59
+   Type: dynamic, Flags: router unique local 
+   NBMA address: 192.0.2.6 
+    (no-socket) 
+BR-2#
+BR-2#
+
+==============================================================================
+Device: BR-2
+Phase: phase3-direct-shortcut
+Captured UTC: 2026-10-25T12:33:34.477675+00:00
+Command: show dmvpn
+------------------------------------------------------------------------------
+show dmvpn
+Legend: Attrb --> S - Static, D - Dynamic, I - Incomplete
+	N - NATed, L - Local, X - No Socket
+	# Ent --> Number of NHRP entries with same NBMA peer
+	NHS Status: E --> Expecting Replies, R --> Responding, W --> Waiting
+	UpDn Time --> Up or Down Time for a Tunnel
+==========================================================================
+
+Interface: Tunnel0, IPv4 NHRP Details 
+Type:Spoke, NHRP Peers:3, 
+
+ # Ent  Peer NBMA Addr Peer Tunnel Add State  UpDn Tm Attrb
+ ----- --------------- --------------- ----- -------- -----
+     3 192.0.2.2          172.16.1.101    UP 00:00:00   DT1
+                          172.16.1.101    UP 00:00:00   DT1
+                          172.16.1.101    UP 00:00:00   DT1
+     1 192.0.2.102          172.16.1.1    UP 00:20:10     S
+     1 192.0.2.202          172.16.1.2    UP 00:20:05     S
+
+BR-2#
+BR-2#

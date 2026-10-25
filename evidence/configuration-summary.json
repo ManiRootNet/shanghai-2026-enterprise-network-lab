@@ -1,0 +1,172 @@
+[
+  {
+    "device": "AS1",
+    "captured_utc": "2026-10-25T12:56:09.713453+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "AS2",
+    "captured_utc": "2026-10-25T12:56:14.790287+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "AS3",
+    "captured_utc": "2026-10-25T12:56:16.179307+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "AS4",
+    "captured_utc": "2026-10-25T12:56:16.840297+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "BR-1",
+    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "BR-2",
+    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "CR-1",
+    "captured_utc": "2026-10-25T12:55:55.382963+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "CR-2",
+    "captured_utc": "2026-10-25T12:55:56.920377+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "DS1",
+    "captured_utc": "2026-10-25T12:55:57.335397+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "DS2",
+    "captured_utc": "2026-10-25T12:56:04.442591+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "DS3",
+    "captured_utc": "2026-10-25T12:56:04.797425+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "DS4",
+    "captured_utc": "2026-10-25T12:56:06.017122+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "IR-1",
+    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "IR-2",
+    "captured_utc": "2026-10-25T12:55:45.423937+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "IR-3",
+    "captured_utc": "2026-10-25T12:55:55.367681+00:00",
+    "timezone_CST_UTC8": true,
+    "admin_privilege15_type8": true,
+    "enable_secret_type8": true,
+    "console_no_timeout": true,
+    "domain_lookup_disabled": true,
+    "ntp_synchronized": true,
+    "running_matches_startup": true
+  },
+  {
+    "device": "ISP1",
+    "captured_utc": "2026-10-25T12:56:18.614678+00:00",
+    "configuration_unchanged": true
+  }
+]

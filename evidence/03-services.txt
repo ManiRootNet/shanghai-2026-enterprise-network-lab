@@ -1,0 +1,416 @@
+FINAL CLOCK AND DHCP STATUS
+
+==============================================================================
+Device: AS1
+Phase: final state
+Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.2
+
+==============================================================================
+Device: AS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: AS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: AS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: BR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: BR-2
+Phase: final state
+Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: CR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:55.382963+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: CR-2
+Phase: final state
+Captured UTC: 2026-10-25T12:55:56.920377+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.2
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show ip dhcp binding
+------------------------------------------------------------------------------
+show ip dhcp binding
+Bindings from all pools not associated with VRF:
+IP address      Client-ID/ 		Lease expiration 	Type       State      Interface
+		Hardware address/
+		User name
+172.16.103.200  0100.5079.6668.11       Infinite                Manual     Active     Unknown
+DS1#
+DS1#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show ip dhcp conflict
+------------------------------------------------------------------------------
+show ip dhcp conflict
+IP address        Detection method   Detection time          VRF
+DS1#
+DS1#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.2
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show ip dhcp binding
+------------------------------------------------------------------------------
+show ip dhcp binding
+Bindings from all pools not associated with VRF:
+IP address      Client-ID/ 		Lease expiration 	Type       State      Interface
+		Hardware address/
+		User name
+172.16.102.178  0100.5079.6668.12       Oct 26 2026 08:21 PM    Automatic  Active     Vlan102
+172.16.103.200  0100.5079.6668.11       Infinite                Manual     Selecting  Unknown
+DS2#
+DS2#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show ip dhcp conflict
+------------------------------------------------------------------------------
+show ip dhcp conflict
+IP address        Detection method   Detection time          VRF
+DS2#
+DS2#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.2
+
+==============================================================================
+Device: IR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 4, reference is 192.0.2.201
+
+==============================================================================
+Device: IR-2
+Phase: final state
+Captured UTC: 2026-10-25T12:55:45.423937+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 4, reference is 192.0.2.201
+
+==============================================================================
+Device: IR-3
+Phase: final state
+Captured UTC: 2026-10-25T12:55:55.367681+00:00
+Command: show ntp status
+------------------------------------------------------------------------------
+Clock is synchronized, stratum 5, reference is 172.16.0.1
+
+==============================================================================
+Device: VPC17
+Phase: final state
+Captured UTC: 2026-10-25T12:56:22.194120+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 172.16.103.200/24
+GATEWAY     : 172.16.103.1
+DNS         : 
+DHCP SERVER : 172.16.103.2
+DHCP LEASE  : 85868, 86400/43200/75600
+MAC         : 00:50:79:66:68:11
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: final state
+Captured UTC: 2026-10-25T12:56:22.194120+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6811/64
+GLOBAL SCOPE      : 2001:db8:16:103:2050:79ff:fe66:6811/64
+DNS               : 
+ROUTER LINK-LAYER : 00:05:73:a0:04:4f
+MAC               : 00:50:79:66:68:11
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC18
+Phase: final state
+Captured UTC: 2026-10-25T12:56:22.395803+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 172.16.102.178/24
+GATEWAY     : 172.16.102.1
+DNS         : 
+DHCP SERVER : 172.16.102.3
+DHCP LEASE  : 84316, 86400/43200/75600
+MAC         : 00:50:79:66:68:12
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC18
+Phase: final state
+Captured UTC: 2026-10-25T12:56:22.395803+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6812/64
+GLOBAL SCOPE      : 2001:db8:16:102:2050:79ff:fe66:6812/64
+DNS               : 
+ROUTER LINK-LAYER : 00:05:73:a0:04:4e
+MAC               : 00:50:79:66:68:12
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: final state
+Captured UTC: 2026-10-25T12:56:23.784440+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 172.22.100.100/24
+GATEWAY     : 172.22.100.1
+DNS         : 
+DHCP SERVER : 172.22.101.1
+DHCP LEASE  : 85739, 86400/43200/75600
+MAC         : 00:50:79:66:68:13
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: final state
+Captured UTC: 2026-10-25T12:56:23.784440+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6813/64
+GLOBAL SCOPE      : 
+DNS               : 
+ROUTER LINK-LAYER : 
+MAC               : 00:50:79:66:68:13
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: final state
+Captured UTC: 2026-10-25T12:56:24.462352+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 172.21.101.101/24
+GATEWAY     : 172.21.101.1
+DNS         : 
+DHCP SERVER : 172.21.101.1
+DHCP LEASE  : 85784, 86400/43200/75600
+MAC         : 00:50:79:66:68:14
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: final state
+Captured UTC: 2026-10-25T12:56:24.462352+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6814/64
+GLOBAL SCOPE      : 
+DNS               : 
+ROUTER LINK-LAYER : 
+MAC               : 00:50:79:66:68:14
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC21
+Phase: final state
+Captured UTC: 2026-10-25T12:56:31.482762+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 203.0.113.75/27
+GATEWAY     : 203.0.113.65
+DNS         : 
+MAC         : 00:50:79:66:68:15
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC21
+Phase: final state
+Captured UTC: 2026-10-25T12:56:31.482762+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6815/64
+GLOBAL SCOPE      : 
+DNS               : 
+ROUTER LINK-LAYER : 
+MAC               : 00:50:79:66:68:15
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC22
+Phase: final state
+Captured UTC: 2026-10-25T12:56:35.219122+00:00
+Command: show ip
+------------------------------------------------------------------------------
+show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 203.0.113.100/27
+GATEWAY     : 203.0.113.97
+DNS         : 
+MAC         : 00:50:79:66:68:16
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:30000
+MTU         : 1500
+
+VPCS>
+
+==============================================================================
+Device: VPC22
+Phase: final state
+Captured UTC: 2026-10-25T12:56:35.219122+00:00
+Command: show ipv6
+------------------------------------------------------------------------------
+show ipv6
+
+NAME              : VPCS[1]
+LINK-LOCAL SCOPE  : fe80::250:79ff:fe66:6816/64
+GLOBAL SCOPE      : 
+DNS               : 
+ROUTER LINK-LAYER : 
+MAC               : 00:50:79:66:68:16
+LPORT             : 20000
+RHOST:PORT        : 127.0.0.1:30000
+MTU:              : 1500
+
+VPCS>

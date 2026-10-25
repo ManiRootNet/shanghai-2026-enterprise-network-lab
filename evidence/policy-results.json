@@ -1,0 +1,326 @@
+[
+  {
+    "role": "HQ-VLAN100",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN100",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN100",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN101",
+    "destination": "203.0.113.100",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN101",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN101",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN100",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN100",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN100",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN102",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN102",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN102",
+    "destination": "8.8.8.8",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN103",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN103",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN103",
+    "destination": "8.8.8.8",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN101",
+    "destination": "203.0.113.100",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN101",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN101",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 3,
+    "administrative_denials": 3,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN102",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN102",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN102",
+    "destination": "8.8.8.8",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN103",
+    "destination": "203.0.113.100",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN103",
+    "destination": "203.0.113.75",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN103",
+    "destination": "8.8.8.8",
+    "replies": 3,
+    "sent": 3,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN103",
+    "destination": "203.0.113.100",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN103",
+    "destination": "203.0.113.75",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN103",
+    "destination": "8.8.8.8",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN102",
+    "destination": "203.0.113.100",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN102",
+    "destination": "203.0.113.75",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "HQ-VLAN102",
+    "destination": "8.8.8.8",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN100",
+    "destination": "203.0.113.100",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN100",
+    "destination": "203.0.113.75",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR2-VLAN100",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 5,
+    "administrative_denials": 5,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN101",
+    "destination": "203.0.113.100",
+    "replies": 0,
+    "sent": 5,
+    "administrative_denials": 5,
+    "expected": "deny",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN101",
+    "destination": "203.0.113.75",
+    "replies": 5,
+    "sent": 5,
+    "administrative_denials": 0,
+    "expected": "allow",
+    "pass": true
+  },
+  {
+    "role": "BR1-VLAN101",
+    "destination": "8.8.8.8",
+    "replies": 0,
+    "sent": 5,
+    "administrative_denials": 5,
+    "expected": "deny",
+    "pass": true
+  }
+]

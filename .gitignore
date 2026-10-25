@@ -1,0 +1,13 @@
+# Public portfolio only. Keep private lab material outside this repository.
+work/
+private-audit/
+*.unl
+*.cfg
+*.conf
+*.bin
+*.qcow2
+*.vmdk
+*.pem
+*.key
+.env
+__pycache__/

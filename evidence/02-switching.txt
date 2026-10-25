@@ -1,0 +1,629 @@
+SELECTED SWITCHING AND GATEWAY OUTPUTS
+
+==============================================================================
+Device: AS1
+Phase: final state
+Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/0       on               802.1q         trunking      888
+Et0/1       on               802.1q         trunking      888
+
+Port        Vlans allowed on trunk
+Et0/0       1-4094
+Et0/1       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/0       1,100-103,888
+Et0/1       1,100-103,888
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/0       1,101,103
+Et0/1       100,102,888
+AS1#
+AS1#
+
+==============================================================================
+Device: AS1
+Phase: final state
+Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0100           100 aabb.cc00.9000       100    2   20  15  Et0/1           
+VLAN0101           101 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0102           102 aabb.cc00.9000       100    2   20  15  Et0/1           
+VLAN0103           103 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0888           888 aabb.cc00.9000       100    2   20  15  Et0/1           
+AS1#
+AS1#
+
+==============================================================================
+Device: AS1
+Phase: final state
+Captured UTC: 2026-10-25T12:56:09.713453+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+AS1#
+AS1#
+
+==============================================================================
+Device: AS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/0       on               802.1q         trunking      888
+Et0/1       on               802.1q         trunking      888
+
+Port        Vlans allowed on trunk
+Et0/0       1-4094
+Et0/1       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/0       1,100-103,888
+Et0/1       1,100-103,888
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/0       1,101,103
+Et0/1       100,102,888
+AS2#
+AS2#
+
+==============================================================================
+Device: AS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0100           100 aabb.cc00.9000       100    2   20  15  Et0/1           
+VLAN0101           101 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0102           102 aabb.cc00.9000       100    2   20  15  Et0/1           
+VLAN0103           103 aabb.cc00.8000       100    2   20  15  Et0/0           
+VLAN0888           888 aabb.cc00.9000       100    2   20  15  Et0/1           
+AS2#
+AS2#
+
+==============================================================================
+Device: AS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:14.790287+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+AS2#
+AS2#
+
+==============================================================================
+Device: AS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/0       on               802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Et0/0       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/0       1,100-103,888
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/0       1,100-103,888
+AS3#
+AS3#
+
+==============================================================================
+Device: AS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.e000         0    2   20  15                  
+VLAN0100         32868 aabb.cc00.e000         0    2   20  15                  
+VLAN0101         32869 aabb.cc00.e000         0    2   20  15                  
+VLAN0102         32870 aabb.cc00.e000         0    2   20  15                  
+VLAN0103         32871 aabb.cc00.e000         0    2   20  15                  
+VLAN0888         33656 aabb.cc00.e000         0    2   20  15                  
+AS3#
+AS3#
+
+==============================================================================
+Device: AS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.179307+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+AS3#
+AS3#
+
+==============================================================================
+Device: AS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/0       on               802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Et0/0       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/0       1,100-103,888
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/0       1,100-103,888
+AS4#
+AS4#
+
+==============================================================================
+Device: AS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.f000         0    2   20  15                  
+VLAN0100         32868 aabb.cc00.f000         0    2   20  15                  
+VLAN0101         32869 aabb.cc00.f000         0    2   20  15                  
+VLAN0102         32870 aabb.cc00.f000         0    2   20  15                  
+VLAN0103         32871 aabb.cc00.f000         0    2   20  15                  
+VLAN0888         33656 aabb.cc00.f000         0    2   20  15                  
+AS4#
+AS4#
+
+==============================================================================
+Device: AS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:16.840297+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+AS4#
+AS4#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/1       on               802.1q         trunking      888
+Et0/2       on               802.1q         trunking      888
+Po12        on               802.1q         trunking      888
+
+Port        Vlans allowed on trunk
+Et0/1       1-4094
+Et0/2       1-4094
+Po12        1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/1       1,100-103,888,999
+Et0/2       1,100-103,888,999
+Po12        1,100-103,888,999
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/1       1,100-103,888,999
+Et0/2       1,100-103,888,999
+Po12        1,100-103,888,999
+DS1#
+DS1#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.8000         0    2   20  15                  
+VLAN0100           100 aabb.cc00.9000        56    2   20  15  Po12            
+VLAN0101           101 aabb.cc00.8000         0    2   20  15                  
+VLAN0102           102 aabb.cc00.9000        56    2   20  15  Po12            
+VLAN0103           103 aabb.cc00.8000         0    2   20  15                  
+VLAN0888           888 aabb.cc00.9000        56    2   20  15  Po12            
+VLAN0999           999 aabb.cc00.8000         0    2   20  15                  
+DS1#
+DS1#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+DS1#
+DS1#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show standby brief
+------------------------------------------------------------------------------
+show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl100       100  100 P Standby 172.16.100.3    local           172.16.100.1
+Vl101       101  110 P Active  local           172.16.101.3    172.16.101.1
+Vl102       102  100 P Standby 172.16.102.3    local           172.16.102.1
+Vl102       1102 100 P Standby FE80::A8BB:CCFF:FE80:9000
+                                               local           FE80::FE80
+Vl103       103  110 P Active  local           172.16.103.3    172.16.103.1
+Vl103       1103 110 P Active  local           FE80::A8BB:CCFF:FE80:9000
+                                                               FE80::FE80
+DS1#
+DS1#
+
+==============================================================================
+Device: DS1
+Phase: final state
+Captured UTC: 2026-10-25T12:55:57.335397+00:00
+Command: show etherchannel summary
+------------------------------------------------------------------------------
+show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+12     Po12(SU)        LACP      Et1/0(P)    Et1/1(P)    
+
+DS1#
+DS1#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/1       on               802.1q         trunking      888
+Et0/2       on               802.1q         trunking      888
+Po12        on               802.1q         trunking      888
+
+Port        Vlans allowed on trunk
+Et0/1       1-4094
+Et0/2       1-4094
+Po12        1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/1       1,100-103,888,999
+Et0/2       1,100-103,888,999
+Po12        1,100-103,888,999
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/1       1,100-103,888,999
+Et0/2       1,100-103,888,999
+Po12        1,100-103,888,999
+DS2#
+DS2#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001         32769 aabb.cc00.8000        56    2   20  15  Po12            
+VLAN0100           100 aabb.cc00.9000         0    2   20  15                  
+VLAN0101           101 aabb.cc00.8000        56    2   20  15  Po12            
+VLAN0102           102 aabb.cc00.9000         0    2   20  15                  
+VLAN0103           103 aabb.cc00.8000        56    2   20  15  Po12            
+VLAN0888           888 aabb.cc00.9000         0    2   20  15                  
+VLAN0999           999 aabb.cc00.8000        56    2   20  15  Po12            
+DS2#
+DS2#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+DS2#
+DS2#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show standby brief
+------------------------------------------------------------------------------
+show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl100       100  110 P Active  local           172.16.100.2    172.16.100.1
+Vl101       101  100 P Standby 172.16.101.2    local           172.16.101.1
+Vl102       102  110 P Active  local           172.16.102.2    172.16.102.1
+Vl102       1102 110 P Active  local           FE80::A8BB:CCFF:FE80:8000
+                                                               FE80::FE80
+Vl103       103  100 P Standby 172.16.103.2    local           172.16.103.1
+Vl103       1103 100 P Standby FE80::A8BB:CCFF:FE80:8000
+                                               local           FE80::FE80
+DS2#
+DS2#
+
+==============================================================================
+Device: DS2
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.442591+00:00
+Command: show etherchannel summary
+------------------------------------------------------------------------------
+show etherchannel summary
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+12     Po12(SU)        LACP      Et1/0(P)    Et1/1(P)    
+
+DS2#
+DS2#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/2       on               802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Et0/2       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/2       1,200-202,999
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/2       1,200-202,999
+DS3#
+DS3#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001             1 aabb.cc00.a000         0    2   20  15                  
+VLAN0200           200 aabb.cc00.a000         0    2   20  15                  
+VLAN0201           201 aabb.cc00.a000         0    2   20  15                  
+VLAN0202           202 aabb.cc00.a000         0    2   20  15                  
+VLAN0999           999 aabb.cc00.a000         0    2   20  15                  
+DS3#
+DS3#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+DS3#
+DS3#
+
+==============================================================================
+Device: DS3
+Phase: final state
+Captured UTC: 2026-10-25T12:56:04.797425+00:00
+Command: show standby brief
+------------------------------------------------------------------------------
+show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl200       200  110 P Active  local           203.0.113.67    203.0.113.65
+Vl201       201  110 P Active  local           203.0.113.99    203.0.113.97
+Vl202       202  110 P Active  local           203.0.113.131   203.0.113.129
+DS3#
+DS3#
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Command: show interfaces trunk
+------------------------------------------------------------------------------
+show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et0/2       on               802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Et0/2       1-4094
+
+Port        Vlans allowed and active in management domain
+Et0/2       1,200-202,999
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et0/2       1,200-202,999
+DS4#
+DS4#
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Command: show spanning-tree root
+------------------------------------------------------------------------------
+show spanning-tree root
+
+                                        Root    Hello Max Fwd
+Vlan                   Root ID          Cost    Time  Age Dly  Root Port
+---------------- -------------------- --------- ----- --- ---  ------------
+VLAN0001             1 aabb.cc00.a000       100    2   20  15  Et0/2           
+VLAN0200           200 aabb.cc00.a000       100    2   20  15  Et0/2           
+VLAN0201           201 aabb.cc00.a000       100    2   20  15  Et0/2           
+VLAN0202           202 aabb.cc00.a000       100    2   20  15  Et0/2           
+VLAN0999           999 aabb.cc00.a000       100    2   20  15  Et0/2           
+DS4#
+DS4#
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Command: show spanning-tree inconsistentports
+------------------------------------------------------------------------------
+show spanning-tree inconsistentports
+
+Name                 Interface                Inconsistency
+-------------------- ------------------------ ------------------
+
+Number of inconsistent ports (segments) in the system : 0
+
+DS4#
+DS4#
+
+==============================================================================
+Device: DS4
+Phase: final state
+Captured UTC: 2026-10-25T12:56:06.017122+00:00
+Command: show standby brief
+------------------------------------------------------------------------------
+show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Vl200       200  100 P Standby 203.0.113.66    local           203.0.113.65
+Vl201       201  100 P Standby 203.0.113.98    local           203.0.113.97
+Vl202       202  100 P Standby 203.0.113.130   local           203.0.113.129
+DS4#
+DS4#

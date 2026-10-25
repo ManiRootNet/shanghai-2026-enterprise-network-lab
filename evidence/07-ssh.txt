@@ -1,0 +1,35 @@
+MANAGEMENT SOURCE ALLOW/DENY TESTS
+
+==============================================================================
+Device: BR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:46:45.679544+00:00
+Command: SSHv2 login to IR1 from Branch 1 MGMT
+------------------------------------------------------------------------------
+ssh -v 2 -l admin 172.16.0.1
+Password:
+
+==============================================================================
+Device: IR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:46:45.679544+00:00
+Command: show privilege over authenticated SSH
+------------------------------------------------------------------------------
+IR-1#
+IR-1#
+Oct 25 12:46:35.471: %SYS-5-CONFIG_I: Configured from console by consoleshow privilege
+Current privilege level is 15
+IR-1#
+IR-1#
+
+==============================================================================
+Device: CR-1
+Phase: final state
+Captured UTC: 2026-10-25T12:46:45.679544+00:00
+Command: SSHv2 attempt from non-MGMT network
+------------------------------------------------------------------------------
+ssh -v 2 -l admin 172.16.0.1
+% Connection refused by remote host
+
+CR-1#
+CR-1#

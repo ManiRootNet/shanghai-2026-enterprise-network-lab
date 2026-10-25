@@ -1,0 +1,530 @@
+LIVE ENDPOINT POLICY TESTS
+Temporary endpoint roles are stated before each probe.
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN100
+Captured UTC: 2026-10-25T12:43:48.279775+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=5.556 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=3.626 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=4.851 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN100
+Captured UTC: 2026-10-25T12:43:51.527691+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=7.917 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=3.680 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=5.380 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN100
+Captured UTC: 2026-10-25T12:43:54.753596+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+*172.16.0.105 icmp_seq=1 ttl=253 time=2.643 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.0.105 icmp_seq=2 ttl=253 time=1.456 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.0.105 icmp_seq=3 ttl=253 time=2.194 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN101
+Captured UTC: 2026-10-25T12:44:06.935305+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+*172.16.101.2 icmp_seq=1 ttl=255 time=1.062 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.101.2 icmp_seq=2 ttl=255 time=49.117 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.101.2 icmp_seq=3 ttl=255 time=1.154 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN101
+Captured UTC: 2026-10-25T12:44:10.193265+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=4.902 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=4.211 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=2.962 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN101
+Captured UTC: 2026-10-25T12:44:13.497838+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+*172.16.101.2 icmp_seq=1 ttl=255 time=9.336 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.101.2 icmp_seq=2 ttl=255 time=1.253 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.101.2 icmp_seq=3 ttl=255 time=1.959 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN100
+Captured UTC: 2026-10-25T12:44:28.302059+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=4.239 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=3.225 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=3.899 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN100
+Captured UTC: 2026-10-25T12:44:31.538805+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=2.951 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=2.975 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=2.597 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN100
+Captured UTC: 2026-10-25T12:44:34.780417+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+*172.16.1.2 icmp_seq=1 ttl=254 time=2.838 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.2 icmp_seq=2 ttl=254 time=8.718 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.2 icmp_seq=3 ttl=254 time=2.158 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN102
+Captured UTC: 2026-10-25T12:44:42.775170+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=1.618 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=2.727 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=3.278 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN102
+Captured UTC: 2026-10-25T12:44:46.011946+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=2.656 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=2.850 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=2.525 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN102
+Captured UTC: 2026-10-25T12:44:49.241059+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=253 time=2.945 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=253 time=1.693 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=253 time=1.656 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN103
+Captured UTC: 2026-10-25T12:44:57.230700+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=2.404 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=2.108 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=2.638 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN103
+Captured UTC: 2026-10-25T12:45:00.485642+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=2.478 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=22.707 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=2.902 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN103
+Captured UTC: 2026-10-25T12:45:03.729426+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=253 time=4.268 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=253 time=5.783 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=253 time=2.703 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN101
+Captured UTC: 2026-10-25T12:45:26.769165+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+*172.22.101.1 icmp_seq=1 ttl=255 time=0.640 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.22.101.1 icmp_seq=2 ttl=255 time=16.736 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.22.101.1 icmp_seq=3 ttl=255 time=1.089 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN101
+Captured UTC: 2026-10-25T12:45:30.006921+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=2.993 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=4.332 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=3.352 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN101
+Captured UTC: 2026-10-25T12:45:33.228509+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+*172.22.101.1 icmp_seq=1 ttl=255 time=1.838 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.22.101.1 icmp_seq=2 ttl=255 time=0.838 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.22.101.1 icmp_seq=3 ttl=255 time=0.882 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN102
+Captured UTC: 2026-10-25T12:45:41.230730+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=1.826 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=2.658 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=2.490 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN102
+Captured UTC: 2026-10-25T12:45:44.468173+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=3.210 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=3.698 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=3.331 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN102
+Captured UTC: 2026-10-25T12:45:47.709709+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=253 time=2.980 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=253 time=7.124 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=253 time=3.283 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN103
+Captured UTC: 2026-10-25T12:45:55.701923+00:00
+Command: ping 203.0.113.100 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 3
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=4.100 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=2.197 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=2.081 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN103
+Captured UTC: 2026-10-25T12:45:58.945465+00:00
+Command: ping 203.0.113.75 -c 3
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 3
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=4.388 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=3.349 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=9.548 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN103
+Captured UTC: 2026-10-25T12:46:02.180620+00:00
+Command: ping 8.8.8.8 -c 3
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 3
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=253 time=3.068 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=253 time=3.063 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=253 time=2.458 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN103
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=4.992 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=2.283 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=3.529 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=4.123 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=6.845 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN103
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=3.302 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=3.075 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=3.138 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=59 time=3.280 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=59 time=2.808 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC17
+Phase: HQ-VLAN103
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=252 time=2.877 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=252 time=3.403 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=252 time=2.004 ms
+84 bytes from 8.8.8.8 icmp_seq=4 ttl=252 time=2.204 ms
+84 bytes from 8.8.8.8 icmp_seq=5 ttl=252 time=1.827 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC18
+Phase: HQ-VLAN102
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=59 time=3.636 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=59 time=3.661 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=59 time=2.676 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=59 time=4.579 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=59 time=3.436 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC18
+Phase: HQ-VLAN102
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=59 time=7.329 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=59 time=4.597 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=59 time=3.897 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=59 time=4.586 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=59 time=3.646 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC18
+Phase: HQ-VLAN102
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+84 bytes from 8.8.8.8 icmp_seq=1 ttl=252 time=4.644 ms
+84 bytes from 8.8.8.8 icmp_seq=2 ttl=252 time=2.606 ms
+84 bytes from 8.8.8.8 icmp_seq=3 ttl=252 time=2.113 ms
+84 bytes from 8.8.8.8 icmp_seq=4 ttl=252 time=2.045 ms
+84 bytes from 8.8.8.8 icmp_seq=5 ttl=252 time=1.545 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN100
+Captured UTC: 2026-10-25T12:22:19.576227+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+84 bytes from 203.0.113.100 icmp_seq=1 ttl=60 time=4.970 ms
+84 bytes from 203.0.113.100 icmp_seq=2 ttl=60 time=2.859 ms
+84 bytes from 203.0.113.100 icmp_seq=3 ttl=60 time=3.337 ms
+84 bytes from 203.0.113.100 icmp_seq=4 ttl=60 time=2.225 ms
+84 bytes from 203.0.113.100 icmp_seq=5 ttl=60 time=8.704 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN100
+Captured UTC: 2026-10-25T12:22:19.576227+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=2.836 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=2.933 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=2.558 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=60 time=2.754 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=60 time=2.344 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC19
+Phase: BR2-VLAN100
+Captured UTC: 2026-10-25T12:22:19.576227+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+*172.16.1.1 icmp_seq=1 ttl=254 time=1.641 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.1 icmp_seq=2 ttl=254 time=2.377 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.1 icmp_seq=3 ttl=254 time=1.230 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.1 icmp_seq=4 ttl=254 time=1.819 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.16.1.1 icmp_seq=5 ttl=254 time=1.988 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN101
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.100 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.100 -c 5
+
+*172.21.101.1 icmp_seq=1 ttl=255 time=1.247 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=2 ttl=255 time=1.418 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=3 ttl=255 time=0.718 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=4 ttl=255 time=1.188 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=5 ttl=255 time=3.473 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN101
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 203.0.113.75 -c 5
+------------------------------------------------------------------------------
+ping 203.0.113.75 -c 5
+
+84 bytes from 203.0.113.75 icmp_seq=1 ttl=60 time=7.560 ms
+84 bytes from 203.0.113.75 icmp_seq=2 ttl=60 time=3.497 ms
+84 bytes from 203.0.113.75 icmp_seq=3 ttl=60 time=3.295 ms
+84 bytes from 203.0.113.75 icmp_seq=4 ttl=60 time=5.563 ms
+84 bytes from 203.0.113.75 icmp_seq=5 ttl=60 time=2.985 ms
+
+VPCS>
+
+==============================================================================
+Device: VPC20
+Phase: BR1-VLAN101
+Captured UTC: 2026-10-25T12:22:19.560645+00:00
+Command: ping 8.8.8.8 -c 5
+------------------------------------------------------------------------------
+ping 8.8.8.8 -c 5
+
+*172.21.101.1 icmp_seq=1 ttl=255 time=1.092 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=2 ttl=255 time=1.440 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=3 ttl=255 time=1.157 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=4 ttl=255 time=0.912 ms (ICMP type:3, code:13, Communication administratively prohibited)
+*172.21.101.1 icmp_seq=5 ttl=255 time=1.284 ms (ICMP type:3, code:13, Communication administratively prohibited)
+
+VPCS>
