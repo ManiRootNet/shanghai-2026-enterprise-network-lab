@@ -1,4 +1,6 @@
-# Skills and evidence
+# Cisco Skills and Evidence | WorldSkills 2028 Preparation
+
+This map connects the Cisco skills practised for WorldSkills 2028 with selected evidence from the Shanghai 2026 Module C lab.
 
 | Skill | Evidence to inspect |
 | --- | --- |

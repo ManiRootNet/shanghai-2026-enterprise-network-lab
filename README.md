@@ -1,12 +1,24 @@
-# Shanghai 2026 Enterprise Network Lab
+# Cisco Enterprise Networking | WorldSkills 2028 Preparation
 
-**Mani Nazari · Network engineering portfolio**
+**Mani Nazari · IT Network Systems Administration · Cisco portfolio**
 
-A four-site Cisco network built in EVE-NG: headquarters, a data centre and two branches connected through a simulated service provider. Personal practice based on the Shanghai 2026 IT Network Systems Administration Module C material.
+I am preparing for **WorldSkills Aichi 2028**, with a focus on IT Network Systems Administration. This repository documents the Cisco networking part of that preparation through a working enterprise lab and selected validation evidence.
 
-**22 nodes · 36/36 verified access-policy checks · Dual-hub DMVPN · Routing and resilience evidence**
+The technical reference is **Shanghai 2026, Module C**. I recreated its networking scenario in EVE-NG, connecting headquarters, a data centre and two branches through a simulated ISP.
 
-![Architecture overview](assets/architecture.png)
+**22 nodes · 4 sites · 36/36 verified access-policy checks · Dual-hub DMVPN**
+
+![Cisco enterprise network architecture for WorldSkills 2028 preparation](assets/architecture.png)
+
+## WorldSkills 2028 preparation
+
+This project develops Cisco routing, switching, network services and practical verification skills. The published records connect the topology to protocol state and observed endpoint behavior, so another engineer can review the implementation.
+
+| Preparation goal | Practice reference | Portfolio focus |
+| --- | --- | --- |
+| WorldSkills Aichi 2028 | Shanghai 2026 IT Network Systems Administration, Module C | Cisco enterprise networking in EVE-NG |
+
+[WorldSkills Aichi 2028](https://worldskills.org/media/news/worldskills-japan-will-host-49th-worldskills-competition/) · [IT Network Systems Administration](https://worldskills.org/skills/id/212/)
 
 ## Engineering scope
 
@@ -49,6 +61,7 @@ The [verification guide](docs/verification-guide.md) explains the collection met
 | Item | Detail |
 | --- | --- |
 | Initial implementation | Mani Nazari |
+| Preparation goal | WorldSkills Aichi 2028 — IT Network Systems Administration |
 | Environment | EVE-NG on VMware, Cisco IOS routers and switches |
 | Validation record | Live console review and controlled tests, 25 October 2026 |
 | Reference | Locally supplied WSC2026 TP39 Module C practice material |
