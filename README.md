@@ -68,4 +68,4 @@ The [verification guide](docs/verification-guide.md) explains the collection met
 
 This repository presents selected implementation outcomes and operational evidence. Configurations, credentials, IOS images and the original question files remain outside the portfolio.
 
-[GitHub profile](https://github.com/ManiRootNet) · [LinkedIn](https://www.linkedin.com/in/mani-nazari-683877381/)
+[GitHub profile](https://github.com/ManiRootNet) · [LinkedIn](https://www.linkedin.com/in/manirootnet/)
